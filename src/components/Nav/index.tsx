@@ -1,10 +1,8 @@
 import React from "react";
 
-import styles from "./styles.less";
-
 const Nav = (props: any) => {
   return (
-    <header className={styles.header}>
+    <header>
       <nav></nav>
     </header>
   );
