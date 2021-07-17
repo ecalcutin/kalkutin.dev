@@ -5,3 +5,6 @@ text (slate) -- secondary
 accent (green) -- accent
 
 white  -- white
+
+autoprefixer (webkit)
+gatsby autoring
