@@ -31,6 +31,7 @@ const configuration: Configuration = {
             options: {
               lessOptions: {
                 javascriptEnabled: true,
+                paths: [path.resolve(__dirname, "src")],
               },
             },
           },
