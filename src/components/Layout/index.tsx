@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Email from "../Email";
 import Nav from "../Nav";
 import Social from "../Social";
 import styles from "./styles.less";
@@ -10,6 +11,7 @@ const Layout = (props: any) => {
       <div className={styles.content}>
         <Nav />
         <Social />
+        <Email />
       </div>
     </Fragment>
   );

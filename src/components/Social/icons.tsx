@@ -1,10 +1,16 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram, FaTelegram } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaTelegram,
+  FaSkype,
+} from "react-icons/fa";
 
 export default [
   {
     name: "Telegram",
-    url: "https://t.me/calcutin",
+    url: "https://t.me/ecalcutin",
     icon: <FaTelegram />,
   },
 
@@ -15,12 +21,17 @@ export default [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/ecalcutin/",
+    url: "https://www.linkedin.com/in/ecalcutin",
     icon: <FaLinkedin />,
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/ecalcutin/",
+    url: "https://www.instagram.com/ecalcutin",
     icon: <FaInstagram />,
+  },
+  {
+    name: "Skype",
+    url: "skype:evgheni.calcutin@gmail.com?chat",
+    icon: <FaSkype />,
   },
 ];
