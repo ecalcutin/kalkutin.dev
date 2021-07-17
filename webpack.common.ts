@@ -4,7 +4,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const isDevelopment = process.env.NODE_ENV !== "production";
-console.log(`Process: ${process.env.NODE_ENV}`);
 
 const configuration: Configuration = {
   entry: "./src/index.tsx",
