@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && webpack --mode=production",
-    "dev": "webpack serve --mode=development",
+    "build": "rimraf dist && webpack -c webpack.prod.ts",
+    "dev": "webpack serve -c webpack.dev.ts",
     "ncu": "npm-check-updates"
   },
   "repository": {
@@ -33,7 +33,8 @@
     "typescript": "^4.3.5",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "react": "^17.0.2",
