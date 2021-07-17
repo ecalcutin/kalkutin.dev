@@ -1,12 +1,24 @@
 import React from "react";
+import Side from "../Side";
 
 import styles from "./styles.less";
+import socialIcons from "./icons";
 
-const Social = (props: any) => {
+type SocialProps = {};
+
+const Social = (props: SocialProps) => {
   return (
-    <nav>
-      <div>nav</div>
-    </nav>
+    <Side orientation="left">
+      <ul className={styles.socialList}>
+        {socialIcons.map(({ name, url, icon }, index) => (
+          <li key={index}>
+            <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+              {icon}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Side>
   );
 };
 

@@ -1,11 +1,18 @@
 import React from "react";
+import clsx from "clsx";
 
 import styles from "./styles.less";
 
-const Side = (props: any) => {
+type SideProps = {
+  orientation: "left" | "right";
+  children: any;
+};
+
+const Side = (props: SideProps) => {
+  const { orientation , children} = props;
   return (
-    <aside>
-      <div>side</div>
+    <aside className={clsx([styles.aside, styles[orientation]])}>
+      {children}
     </aside>
   );
 };

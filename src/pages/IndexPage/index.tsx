@@ -7,9 +7,7 @@ const IndexPage = () => {
   return (
     <div>
       <div>Index page</div>
-      {/* <Layout>Inside layout</Layout> */}
-      <div className={styles.navy}>hellos</div>
-      <div className={styles.darken}>hellos</div>
+      <Layout>Inside layout</Layout>
     </div>
   );
 };

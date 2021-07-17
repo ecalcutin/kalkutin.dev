@@ -1,7 +1,6 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -13,7 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/ecalcutin/resume.git"
   },
-  "keywords": [],
   "author": "Evgheni Calcutin",
   "license": "ISC",
   "bugs": {
@@ -47,6 +45,7 @@
   "dependencies": {
     "clsx": "^1.1.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0"
   }
 }
