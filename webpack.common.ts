@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const configuration: Configuration = {
   entry: "./src/index.tsx",
+  target: "web",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -14,6 +15,14 @@ const configuration: Configuration = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.less$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "less-loader" },
+        ],
       },
     ],
   },
