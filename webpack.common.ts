@@ -1,6 +1,10 @@
 import path from "path";
 import { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
+const isDevelopment = process.env.NODE_ENV !== "production";
+console.log(`Process: ${process.env.NODE_ENV}`);
 
 const configuration: Configuration = {
   entry: "./src/index.tsx",
@@ -19,7 +23,11 @@ const configuration: Configuration = {
       {
         test: /\.less$/,
         use: [
-          { loader: "style-loader" },
+          {
+            loader: isDevelopment
+              ? "style-loader"
+              : MiniCssExtractPlugin.loader,
+          },
           {
             loader: "css-loader",
             options: {
@@ -46,6 +54,13 @@ const configuration: Configuration = {
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
+    ...(!isDevelopment
+      ? [
+          new MiniCssExtractPlugin({
+            filename: "[name].css",
+          }),
+        ]
+      : []),
   ],
 };
 
