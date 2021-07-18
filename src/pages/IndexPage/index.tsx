@@ -8,7 +8,6 @@ import styles from "./styles.less";
 const IndexPage = () => {
   return (
     <Layout>
-      Layout
       <main className={styles.heroWrapper}>
         <Hero />
       </main>

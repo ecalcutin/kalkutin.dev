@@ -4,7 +4,6 @@ import IndexPage from "./pages/IndexPage";
 const App = () => {
   return (
     <div>
-      <div>App</div>
       <div>
         <IndexPage />
       </div>
