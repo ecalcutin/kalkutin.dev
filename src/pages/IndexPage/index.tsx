@@ -1,14 +1,18 @@
 import React from "react";
+
 import Layout from "../../components/Layout";
+import Hero from "../../sections/Hero";
 
 import styles from "./styles.less";
 
 const IndexPage = () => {
   return (
-    <div>
-      <div>Index page</div>
-      <Layout>Inside layout</Layout>
-    </div>
+    <Layout>
+      Layout
+      <main className={styles.heroWrapper}>
+        <Hero />
+      </main>
+    </Layout>
   );
 };
 

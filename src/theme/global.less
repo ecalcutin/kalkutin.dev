@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "colors.less";
+@import "mixins.less";
 
 *,
 *:before,
@@ -95,20 +96,6 @@ main {
   }
   @media (max-width: 480px) {
     padding: 125px 25px;
-  }
-
-  &.fillHeight {
-    padding: 0 150px;
-
-    @media (max-width: 1080px) {
-      padding: 0 100px;
-    }
-    @media (max-width: 768px) {
-      padding: 0 50px;
-    }
-    @media (max-width: 480px) {
-      padding: 0 25px;
-    }
   }
 }
 
@@ -254,4 +241,157 @@ textarea {
       opacity: 0.5;
     }
   }
+}
+
+p {
+  margin: 0 0 15px 0;
+
+  &:last-child,
+  &:last-of-type {
+    margin: 0;
+  }
+
+  & > a {
+    .inlineLink();
+  }
+
+  & > code {
+    background-color: @color-primary-light;
+    color: @color-white;
+    font-size: @font-size-sm;
+    border-radius: var(--border-radius);
+    padding: 0.3em 0.5em;
+  }
+}
+
+ul {
+  &.fancy-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: @font-size-lg;
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: @color-accent;
+      }
+    }
+  }
+}
+
+blockquote {
+  border-left-color: @color-accent;
+  border-left-style: solid;
+  border-left-width: 1px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1.5rem;
+
+  p {
+    font-style: italic;
+    font-size: 24px;
+  }
+}
+
+hr {
+  background-color: @color-primary-lighten;
+  height: 1px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 1rem;
+}
+
+code {
+  font-family: @font-mono;
+  font-size: @font-size-md;
+}
+
+.skip-to-content {
+  // ${({ theme }) => theme.mixins.button};
+  position: absolute;
+  top: auto;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -99;
+
+  &:focus,
+  &:active {
+    background-color: @color-accent;
+    color: @color-primary;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    z-index: 99;
+  }
+}
+
+#logo {
+  color: @color-accent;
+}
+
+.overline {
+  color: @color-accent;
+  font-family: @font-mono;
+  font-size: @font-size-md;
+  font-weight: 400;
+}
+
+.subtitle {
+  color: @color-accent;
+  margin: 0 0 20px 0;
+  font-size: @font-size-md;
+  font-family: @font-mono;
+  font-weight: 400;
+  line-height: 1.5;
+  @media (max-width: 1080px) {
+    font-size: @font-size-sm;
+  }
+  @media (max-width: 768px) {
+    font-size: @font-size-xs;
+  }
+
+  a {
+    .inlineLink();
+    line-height: 1.5;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  color: var(--green);
+
+  .arrow {
+    display: block;
+    margin-right: 10px;
+    padding-top: 4px;
+  }
+
+  a {
+    .inlineLink() {
+      @import "mixins.less";
+    }
+    font-family: @font-mono;
+    font-size: @font-size-sm;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.gatsby-image-outer-wrapper {
+  height: 100%;
 }

@@ -1,0 +1,74 @@
+@import "theme/variables.less";
+@import "theme/colors.less";
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inlineLink {
+  transition: @transition-all;
+  color: @color-accent;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: @color-accent;
+    outline: 0;
+
+    &:after {
+      width: 100%;
+    }
+    & > * {
+      color: @color-accent !important;
+      transition: @transition-all;
+    }
+  }
+
+  &:after {
+    background-color: @color-accent;
+    transition: @transition-all;
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    opacity: 0.5;
+  }
+}
+
+.bigButton {
+  color: @color-accent;
+  font-size: @font-size-sm;
+  font-family: @font-mono;
+  border: 1px solid @color-accent;
+  border-radius: @border-radius;
+  transition: @transition-all;
+  background-color: transparent;
+  padding: 1.25rem 1.75rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @color-accent-tint;
+    outline: none;
+  }
+
+  &:after {
+    display: none !important;
+  }
+}

@@ -4,14 +4,20 @@ import Nav from "../Nav";
 import Social from "../Social";
 import styles from "./styles.less";
 
-const Layout = (props: any) => {
-  console.log(styles); // undefined
+type LayoutProps = {
+  children: any;
+};
+
+const Layout = (props: LayoutProps) => {
+  const { children } = props;
+
   return (
     <Fragment>
       <div className={styles.content}>
         <Nav />
         <Social />
         <Email />
+        <div id="content">{children}</div>
       </div>
     </Fragment>
   );
