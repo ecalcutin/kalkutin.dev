@@ -1,0 +1,16 @@
+nginx:
+  image: jonasal/nginx-certbot:latest
+  restart: unless-stopped
+  environment:
+    - CERTBOT_EMAIL: evgheni.calcutin@gmail.com
+    - RENEWAL_INTERVAL: 1d
+    - DEBUG: 0
+  ports:
+    - 80:80
+    - 443:443
+  volumes:
+    - letsencrypt:/etc/letsencrypt
+    - ./nginx:/etc/nginx/user_conf.d
+
+volumes:
+  letsencrypt:
