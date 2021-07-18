@@ -1,4 +1,6 @@
-nginx:
+version: "3.8"
+services:
+  nginx:
   image: jonasal/nginx-certbot:latest
   restart: unless-stopped
   environment:
@@ -11,6 +13,12 @@ nginx:
   volumes:
     - letsencrypt:/etc/letsencrypt
     - ./nginx:/etc/nginx/user_conf.d
+
+  website:
+    image: ecalcutin/kalkutin.dev-webiste
+    restart: always
+    ports:
+      - 8080:80
 
 volumes:
   letsencrypt:
