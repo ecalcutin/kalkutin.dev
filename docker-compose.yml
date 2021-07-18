@@ -4,9 +4,11 @@ services:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
     environment:
-      - CERTBOT_EMAIL:evgheni.calcutin@gmail.com
-      - RENEWAL_INTERVAL:1d
-      - DEBUG:0
+      - CERTBOT_EMAIL
+      - RENEWAL_INTERVAL
+      - DEBUG
+    env_file:
+      - ./certbot.env
     ports:
       - 80:80
       - 443:443
@@ -15,7 +17,7 @@ services:
       - ./nginx:/etc/nginx/user_conf.d
 
   website:
-    image: ecalcutin/kalkutin.dev-webiste
+    image: ecalcutin/kalkutin.dev-website
     restart: always
     ports:
       - 8080:80
