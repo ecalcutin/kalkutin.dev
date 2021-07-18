@@ -22,6 +22,7 @@ const Nav = (props: any) => {
               <a>Contact</a>
             </li>
           </ol>
+          <div className={""}></div>
         </div>
       </nav>
     </header>
