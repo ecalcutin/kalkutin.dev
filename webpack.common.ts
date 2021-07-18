@@ -30,7 +30,9 @@ const configuration: Configuration = {
           {
             loader: "css-loader",
             options: {
-              modules: true,
+              modules: {
+                auto: /styles\.less$/,
+              },
             },
           },
           {
