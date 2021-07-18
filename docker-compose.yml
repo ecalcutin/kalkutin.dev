@@ -4,8 +4,8 @@ services:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
     environment:
-      - CERTBOT_EMAIL: evgheni.calcutin@gmail.com
-      - RENEWAL_INTERVAL: 1d
+      - CERTBOT_EMAIL: "evgheni.calcutin@gmail.com"
+      - RENEWAL_INTERVAL: "1d"
       - DEBUG: 0
     ports:
       - 80:80
