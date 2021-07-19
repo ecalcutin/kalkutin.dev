@@ -1,10 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
+
+import HomePage from "pages/HomePage";
+import Layout from "components/Layout";
 
 const App = () => {
   return (
-    <div>
-      <div></div>
-    </div>
+    <Fragment>
+      <Layout>
+        <HomePage />
+      </Layout>
+    </Fragment>
   );
 };
 

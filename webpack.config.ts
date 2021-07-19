@@ -60,12 +60,13 @@ const configuration: Configuration = {
       },
     ],
   },
-  optimization: {
-    sideEffects: true,
-  },
   resolve: {
-    mainFields: ["module", "main"],
-    extensions: [".mjs", ".ts", ".tsx", ".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js"],
+    alias: {
+      pages: path.resolve(__dirname, "src", "pages"),
+      components: path.resolve(__dirname, "src", "components"),
+      theme: path.resolve(__dirname, "src", "theme"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

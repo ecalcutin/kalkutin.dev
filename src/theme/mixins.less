@@ -11,42 +11,6 @@
   align-items: center;
 }
 
-.inlineLink {
-  transition: @transition-all;
-  color: @color-accent;
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  position: relative;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: @color-accent;
-    outline: 0;
-
-    &:after {
-      width: 100%;
-    }
-    & > * {
-      color: @color-accent !important;
-      transition: @transition-all;
-    }
-  }
-
-  &:after {
-    background-color: @color-accent;
-    transition: @transition-all;
-    content: "";
-    display: block;
-    width: 0;
-    height: 1px;
-    position: relative;
-    bottom: 0.37em;
-    opacity: 0.5;
-  }
-}
-
 .button {
   font-size: @font-size-xs;
   font-family: @font-mono;
