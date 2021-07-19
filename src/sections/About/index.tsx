@@ -1,7 +1,10 @@
 import React from "react";
+import styles from './styles.less'
 
 const About = () => {
-  return <div>About</div>;
+  return <section className={styles.about}>
+    
+  </section>;
 };
 
 export default About;

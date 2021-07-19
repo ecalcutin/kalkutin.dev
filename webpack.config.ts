@@ -1,22 +1,34 @@
 import path from "path";
-import { Configuration } from "webpack";
+import { Configuration as WebpackConfiguration } from "webpack";
+import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
 
-const isDevelopment = process.env.NODE_ENV !== "production";
+const isDevelopment = process.env.NODE_ENV === "development";
+
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
 
 const configuration: Configuration = {
   entry: "./src/index.tsx",
   target: "web",
+  mode: isDevelopment ? "development" : "production",
+  devtool: isDevelopment ? "eval-cheap-module-source-map" : "source-map",
+  devServer: {
+    port: 8080,
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: "ts-loader",
+        test: /\.(j|t)sx?$/,
+        use: "babel-loader",
         exclude: /node_modules/,
       },
       {
@@ -48,20 +60,25 @@ const configuration: Configuration = {
       },
     ],
   },
+  optimization: {
+    sideEffects: true,
+  },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    mainFields: ["module", "main"],
+    extensions: [".mjs", ".ts", ".tsx", ".js", ".jsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
-    ...(!isDevelopment
-      ? [
-          new MiniCssExtractPlugin({
-            filename: "[name].css",
-          }),
-        ]
-      : []),
+    ...(!isDevelopment && [
+      new MiniCssExtractPlugin({
+        filename: "[name].css",
+      }),
+      new PreloadWebpackPlugin({
+        fileBlacklist: [/^((?!css).)*$/],
+      }),
+    ]),
   ],
 };
 
