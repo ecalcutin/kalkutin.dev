@@ -23,6 +23,7 @@ const configuration: Configuration = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
+    clean: true,
   },
   module: {
     rules: [
@@ -77,7 +78,9 @@ const configuration: Configuration = {
         filename: "[name].css",
       }),
       new PreloadWebpackPlugin({
-        fileBlacklist: [/^((?!css).)*$/],
+        rel: "preload",
+        include: "all",
+        fileBlacklist: [/^((?!(css|woff?)).)*$/],
       }),
     ]),
   ],
