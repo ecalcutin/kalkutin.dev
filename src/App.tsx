@@ -4,6 +4,7 @@ import HomePage from "pages/HomePage";
 import Layout from "components/Layout";
 import Nav from "components/Nav";
 import Social from "components/Social";
+import Email from "components/Email";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Layout>
         <Nav />
         <Social />
+        <Email />
         <HomePage />
       </Layout>
     </Fragment>
