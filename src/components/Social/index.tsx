@@ -11,7 +11,13 @@ const Social = () => {
         <ul className={styles.socialList}>
           {icons.map(({ url, icon, title }, index) => (
             <li key={index}>
-              <a title={title} aria-label={title} href={url}>
+              <a
+                title={title}
+                aria-label={title}
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {icon}
               </a>
             </li>
