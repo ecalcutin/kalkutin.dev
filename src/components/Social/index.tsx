@@ -2,13 +2,22 @@ import Side from "components/Side";
 import React, { Fragment } from "react";
 
 import styles from "./styles.less";
+import icons from "./icons";
 
-type SocialProps = {};
-
-const Social = (props: SocialProps) => {
+const Social = () => {
   return (
     <Fragment>
-      <Side orientation="left">Social</Side>
+      <Side orientation="left">
+        <ul className={styles.socialList}>
+          {icons.map(({ url, icon, title }, index) => (
+            <li key={index}>
+              <a title={title} aria-label={title} href={url}>
+                {icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Side>
     </Fragment>
   );
 };
