@@ -1,0 +1,69 @@
+@import "theme/mixins.less";
+
+.header {
+  .flexBetween();
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(10, 25, 47, 0.85);
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+  backdrop-filter: blur(10px);
+  transition: @transition-all;
+
+  @media (max-width: 1080px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
+}
+
+.nav {
+  .flexBetween();
+  position: relative;
+  width: 100%;
+  color: @color-secondary-lighten;
+  font-family: @font-mono;
+  counter-reset: item 0;
+  z-index: 12;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  ol {
+    .flexBetween();
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin: 0 5px;
+      position: relative;
+      counter-increment: item 1;
+      font-size: @font-size-xs;
+
+      a {
+        padding: 10px;
+
+        &:before {
+          content: "0" counter(item) ".";
+          margin-right: 5px;
+          color: @color-accent;
+          font-size: @font-size-xxs;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
