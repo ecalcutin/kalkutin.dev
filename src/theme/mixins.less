@@ -34,3 +34,13 @@
     display: none !important;
   }
 }
+
+.boxShadow {
+  box-shadow: 0 10px 30px -15px @color-primary-shadow;
+  transition: @transition-all;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 20px 30px -15px @color-primary-shadow;
+  }
+}
