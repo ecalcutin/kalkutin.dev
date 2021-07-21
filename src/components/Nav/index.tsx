@@ -11,16 +11,16 @@ const Nav = () => {
           <div className={styles.links}>
             <ol>
               <li>
-                <a>About</a>
+                <a href="#">About</a>
               </li>
               <li>
-                <a>Experience</a>
+                <a href="#">Experience</a>
               </li>
               <li>
-                <a>Work</a>
+                <a href="#">Work</a>
               </li>
               <li>
-                <a>Contact</a>
+                <a href="#">Contact</a>
               </li>
             </ol>
           </div>
