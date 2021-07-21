@@ -5,7 +5,9 @@ import Hero from "components/sections/Hero";
 const HomePage = () => {
   return (
     <Fragment>
-      <Hero />
+      <main className="fillHeight">
+        <Hero />
+      </main>
     </Fragment>
   );
 };
