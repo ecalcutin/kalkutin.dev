@@ -25,12 +25,7 @@ const About = () => {
         </div>
         <div className={styles.myPicture}>
           <div className={styles.wrapper}>
-            <img
-              height="auto"
-              width="auto"
-              src={ProfileImage}
-              className={styles.img}
-            />
+            <img src={ProfileImage} className={styles.img} />
           </div>
         </div>
       </div>
