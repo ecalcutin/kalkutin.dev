@@ -4,7 +4,6 @@ import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-serv
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import PreloadWebpackPlugin from "@vue/preload-webpack-plugin";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -81,15 +80,6 @@ const configuration: Configuration = {
     ...(!isDevelopment && [
       new MiniCssExtractPlugin({
         filename: "[name].css",
-      }),
-      new PreloadWebpackPlugin({
-        rel: "preload",
-        as(entry) {
-          if (/\.css$/.test(entry)) return "style";
-          if (/\.woff/.test(entry)) return "font";
-          if (/\.png$/.test(entry)) return "image";
-          return "script";
-        },
       }),
     ]),
   ],
