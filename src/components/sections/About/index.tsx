@@ -7,7 +7,7 @@ const About = () => {
   const skills = ["JavaScript (ES6+)", "React", "Node.js", "Cypress"];
   return (
     <section className={styles.about}>
-      <h2>About Me</h2>
+      <h2 className={styles.heading}>About Me</h2>
       <div className={styles.inner}>
         <div>
           <p>
