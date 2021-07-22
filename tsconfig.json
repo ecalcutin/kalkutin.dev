@@ -2,7 +2,8 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "baseUrl": "./src"
-  }
+  },
+  "exclude": ["**/*.spec.tsx"]
 }
