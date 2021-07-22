@@ -25,7 +25,7 @@ const About = () => {
         </div>
         <div className={styles.myPicture}>
           <div className={styles.wrapper}>
-            <img src={ProfileImage} width={300} height="auto" />
+            <img src={ProfileImage} className={styles.img} />
           </div>
         </div>
       </div>
