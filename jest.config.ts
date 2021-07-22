@@ -7,10 +7,7 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     "\\.(css|less)$": "identity-obj-proxy",
   },
-  testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)+(spec|test).+(ts|tsx|js)",
-  ],
+  testMatch: ["**/?(*.)spec.tsx"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
