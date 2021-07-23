@@ -60,7 +60,17 @@ const configuration: Configuration = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        loader: "url-loader",
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name][ext]",
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/fonts/[name][ext]",
+        },
       },
     ],
   },
