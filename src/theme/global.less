@@ -133,6 +133,39 @@ body {
     &:focus {
       color: @color-accent;
     }
+
+    &.inline-link {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      position: relative;
+      transition: @transition-all;
+      color: @color-accent;
+      &:hover,
+      &:focus,
+      &:active {
+        color: @color-accent;
+        outline: 0;
+        &:after {
+          width: 100%;
+        }
+        & > * {
+          color: @color-accent !important;
+          transition: @transition-all;
+        }
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        position: relative;
+        bottom: 0.37em;
+        background-color: @color-accent;
+        transition: @transition-all;
+        opacity: 0.5;
+      }
+    }
   }
 }
 
@@ -182,4 +215,10 @@ body {
       margin-left: 10px;
     }
   }
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
 }

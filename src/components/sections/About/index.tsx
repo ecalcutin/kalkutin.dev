@@ -6,7 +6,7 @@ import styles from "./styles.less";
 const About = () => {
   const skills = ["JavaScript (ES6+)", "React", "Node.js", "Cypress"];
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <h2 className="numbered-heading">About Me</h2>
       <div className={styles.inner}>
         <div>

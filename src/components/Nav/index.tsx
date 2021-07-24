@@ -11,10 +11,10 @@ const Nav = () => {
           <div className={styles.links}>
             <ol>
               <li>
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#">Experience</a>
+                <a href="#experience">Experience</a>
               </li>
               <li>
                 <a href="#">Work</a>
