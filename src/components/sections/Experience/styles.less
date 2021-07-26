@@ -21,6 +21,7 @@
   position: relative;
   z-index: 3;
   width: max-content;
+  max-width: 200px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -75,13 +76,14 @@
   color: inherit;
   position: relative;
   transition: @transition-all;
+
   &:hover,
   &:active,
   &:focus {
     color: @color-accent;
     outline: 0;
   }
-  //   color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
+
   font-family: @font-mono;
   font-size: @font-size-xs;
   text-align: left;
@@ -104,6 +106,10 @@
   &:focus {
     background-color: @color-primary-light;
   }
+
+  &.active {
+    color: @color-accent;
+  }
 }
 
 .highlight {
@@ -115,9 +121,7 @@
   height: 42px;
   border-radius: @border-radius;
   background: @color-accent;
-  //   transform: translateY(
-  //     calc($ {({activeTabId}) => activeTabId} * var(--tab-height))
-  //   );
+
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
@@ -128,9 +132,6 @@
     max-width: 120px;
     height: 2px;
     margin-left: 50px;
-    // transform: translateX(
-    //   calc($ {({activeTabId}) => activeTabId} * var(--tab-width))
-    // );
   }
   @media (max-width: 480px) {
     margin-left: 25px;
@@ -153,7 +154,21 @@
   padding: 10px 5px;
 
   ul {
-    // ${({ theme }) => theme.mixins.fancyList};
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: @font-size-lg;
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: @color-accent;
+      }
+    }
   }
 
   h3 {
