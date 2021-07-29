@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 import { GlobalStyle, theme } from "theme";
 

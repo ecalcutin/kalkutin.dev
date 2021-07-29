@@ -1,15 +1,10 @@
 import React, { Fragment } from "react";
-import styled from "styled-components";
+
+import { StyledContent } from "./styles";
 
 import Social from "components/Social";
 import Email from "components/Email";
 import Nav from "components/Nav";
-
-const StyledContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
 
 const Layout = (props) => {
   return (
