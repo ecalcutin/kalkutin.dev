@@ -1,12 +1,24 @@
 import React from "react";
 
 import { StyledHeader, StyledLinks, StyledNav } from "./styles";
+import IconLogo from "./logo";
+
+const Logo = () => {
+  return (
+    <div className="logo" tabIndex={-1}>
+      <a href="#">
+        <IconLogo />
+      </a>
+    </div>
+  );
+};
 
 const Nav = () => {
   return (
     <StyledHeader>
       <StyledNav>
-        <div id="logo"></div>
+        <Logo />
+
         <StyledLinks>
           <ol>
             <li>
