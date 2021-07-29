@@ -5,6 +5,7 @@ import { StyledContent } from "./styles";
 import Social from "components/Social";
 import Email from "components/Email";
 import Nav from "components/Nav";
+import Footer from "components/Footer";
 
 const Layout = (props) => {
   return (
@@ -15,7 +16,7 @@ const Layout = (props) => {
         <Email />
         <div id="content">
           {props.children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </StyledContent>
     </Fragment>
