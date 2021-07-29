@@ -13,7 +13,7 @@ const StyledMainContainer = styled.main`
 const HomePage = () => {
   return (
     <Fragment>
-      <StyledMainContainer>
+      <StyledMainContainer className="fillHeight">
         <Hero />
         <About />
         <Experience />
