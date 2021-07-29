@@ -1,6 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
-import fonts from './fonts';
-import variables from './variables';
+import { createGlobalStyle } from "styled-components";
+
+import fonts from "./fonts";
+import variables from "./variables";
+import TransitionStyles from "./transitions";
 
 const GlobalStyle = createGlobalStyle`
   ${fonts};
@@ -417,6 +419,8 @@ const GlobalStyle = createGlobalStyle`
   .gatsby-image-outer-wrapper {
     height: 100%;
   }
+
+  ${TransitionStyles};
 `;
 
 export default GlobalStyle;

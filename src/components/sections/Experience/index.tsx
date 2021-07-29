@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import {
   StyledHighlight,
@@ -55,37 +56,43 @@ const Experience = () => {
                 i
               ) => {
                 return (
-                  <StyledTabPanel
+                  <CSSTransition
                     key={i}
-                    id={`panel-${i}`}
-                    role="tabpanel"
-                    tabIndex={activeTabId === i ? 0 : -1}
-                    aria-labelledby={`tab-${i}`}
-                    aria-hidden={activeTabId !== i}
-                    hidden={activeTabId !== i}
+                    in={activeTabId === i}
+                    timeout={250}
+                    classNames="fade"
                   >
-                    <h3>
-                      <span>{position}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
+                    <StyledTabPanel
+                      id={`panel-${i}`}
+                      role="tabpanel"
+                      tabIndex={activeTabId === i ? 0 : -1}
+                      aria-labelledby={`tab-${i}`}
+                      aria-hidden={activeTabId !== i}
+                      hidden={activeTabId !== i}
+                    >
+                      <h3>
+                        <span>{position}</span>
+                        <span className="company">
+                          &nbsp;@&nbsp;
+                          <a href={url} className="inline-link">
+                            {company}
+                          </a>
+                        </span>
+                      </h3>
 
-                    <p className="range">{dateRange}</p>
-                    <div>
-                      <p>{description}</p>
-                    </div>
-                    <div style={{ marginTop: 24 }}>
-                      <ul>
-                        {achievements.map((achievement, index) => (
-                          <li key={index}>{achievement}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </StyledTabPanel>
+                      <p className="range">{dateRange}</p>
+                      <div>
+                        <p>{description}</p>
+                      </div>
+                      <div style={{ marginTop: 24 }}>
+                        <ul>
+                          {achievements.map((achievement, index) => (
+                            <li key={index}>{achievement}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </StyledTabPanel>
+                  </CSSTransition>
                 );
               }
             )}
