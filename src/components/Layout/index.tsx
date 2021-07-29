@@ -1,22 +1,24 @@
 import React, { Fragment } from "react";
 
+import { StyledContent } from "./styles";
+
+import Social from "components/Social";
+import Email from "components/Email";
+import Nav from "components/Nav";
 import Footer from "components/Footer";
 
-import styles from "./styles.less";
-
-type LayoutProps = {
-  children: any;
-};
-
-const Layout = (props: LayoutProps) => {
+const Layout = (props) => {
   return (
     <Fragment>
-      <div className={styles.layout}>
+      <StyledContent>
+        <Nav />
+        <Social />
+        <Email />
         <div id="content">
           {props.children}
           <Footer />
         </div>
-      </div>
+      </StyledContent>
     </Fragment>
   );
 };

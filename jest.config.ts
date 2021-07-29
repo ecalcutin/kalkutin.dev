@@ -5,7 +5,7 @@ const config: Config.InitialOptions = {
   modulePaths: ["<rootDir>/src"],
   moduleFileExtensions: ["ts", "tsx", "js"],
   moduleNameMapper: {
-    "\\.(css|less)$": "identity-obj-proxy",
+    "\\.(jpg|woff|woff2)$": "<rootDir>/jest/file-mock.ts",
   },
   testMatch: ["**/?(*.)spec.tsx"],
   transform: {

@@ -1,17 +1,30 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-import styles from "./styles.less";
+import socialMedia from "config/social/social-media";
+import { StyledCredit, StyledFooter, StyledSocialLinks } from "./styles";
 
 const Footer = () => {
   return (
-    <Fragment>
-      {/* <div className={styles.socialLinks}>
-          <ul>
+    <StyledFooter>
+      <StyledSocialLinks>
+        <ul>
+          {socialMedia &&
+            socialMedia.map(({ title, icon, url }, i) => (
+              <li key={i}>
+                <a href={url} title={title}>
+                  {icon}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </StyledSocialLinks>
 
-          </ul>
-      </div> */}
-    </Fragment>
+      <StyledCredit>
+        <a href="https://github.com/ecalcutin/resume">
+          <div>Designed &amp; Built by Evgheni Calcutin</div>
+        </a>
+      </StyledCredit>
+    </StyledFooter>
   );
 };
-
 export default Footer;

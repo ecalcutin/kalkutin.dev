@@ -1,31 +1,23 @@
+import React from "react";
+
 import Side from "components/Side";
-import React, { Fragment } from "react";
+import socialMedia from "config/social/social-media";
 
-import styles from "./styles.less";
-import icons from "./icons";
+import { StyledSocialList } from "./styles";
 
-const Social = () => {
-  return (
-    <Fragment>
-      <Side orientation="left">
-        <ul className={styles.socialList}>
-          {icons.map(({ url, icon, title }, index) => (
-            <li key={index}>
-              <a
-                title={title}
-                aria-label={title}
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {icon}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </Side>
-    </Fragment>
-  );
-};
+const Social = () => (
+  <Side orientation="left">
+    <StyledSocialList>
+      {socialMedia &&
+        socialMedia.map(({ url, title, icon }, index) => (
+          <li key={index}>
+            <a title={title} href={url} target="_blank" rel="noreferrer">
+              {icon}
+            </a>
+          </li>
+        ))}
+    </StyledSocialList>
+  </Side>
+);
 
 export default Social;

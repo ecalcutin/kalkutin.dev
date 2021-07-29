@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Social links should render correctly 1`] = `
-<aside
-  className="aside left"
+<div
+  className="sc-bdnxRM bFZpkQ"
+  orientation="left"
 >
   <ul
-    className="socialList"
+    className="sc-gtsrHT hJdvQD"
   >
     <li>
       <a
-        aria-label="Telegram"
         href="https://t.me/ecalcutin"
         rel="noreferrer"
         target="_blank"
@@ -37,7 +37,6 @@ exports[`Social links should render correctly 1`] = `
     </li>
     <li>
       <a
-        aria-label="GitHub"
         href="https://github.com/ecalcutin"
         rel="noreferrer"
         target="_blank"
@@ -65,7 +64,6 @@ exports[`Social links should render correctly 1`] = `
     </li>
     <li>
       <a
-        aria-label="LinkedIn"
         href="https://www.linkedin.com/in/ecalcutin"
         rel="noreferrer"
         target="_blank"
@@ -93,7 +91,6 @@ exports[`Social links should render correctly 1`] = `
     </li>
     <li>
       <a
-        aria-label="Instagram"
         href="https://www.instagram.com/ecalcutin"
         rel="noreferrer"
         target="_blank"
@@ -121,7 +118,6 @@ exports[`Social links should render correctly 1`] = `
     </li>
     <li>
       <a
-        aria-label="Skype"
         href="skype:evgheni.calcutin@gmail.com?chat"
         rel="noreferrer"
         target="_blank"
@@ -148,5 +144,5 @@ exports[`Social links should render correctly 1`] = `
       </a>
     </li>
   </ul>
-</aside>
+</div>
 `;

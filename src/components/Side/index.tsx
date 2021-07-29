@@ -1,21 +1,17 @@
-import React, { Fragment } from "react";
-import clsx from "clsx";
+import React from "react";
 
-import styles from "./styles.less";
+import { StyledSideElement } from "./styles";
 
-type LayoutProps = {
+type SideProps = {
   orientation: "left" | "right";
   children: any;
 };
 
-const Side = (props: LayoutProps) => {
+const Side = (props: SideProps) => {
   const { orientation, children } = props;
+
   return (
-    <Fragment>
-      <aside className={clsx([styles.aside, styles[orientation]])}>
-        {children}
-      </aside>
-    </Fragment>
+    <StyledSideElement orientation={orientation}>{children}</StyledSideElement>
   );
 };
 

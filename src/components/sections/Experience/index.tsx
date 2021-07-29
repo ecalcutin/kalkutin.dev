@@ -1,81 +1,91 @@
 import React, { useState } from "react";
-import clsx from "clsx";
 
-import styles from "./styles.less";
+import {
+  StyledHighlight,
+  StyledJobsSection,
+  StyledTabButton,
+  StyledTabList,
+  StyledTabPanel,
+  StyledTabPanels,
+} from "./styles";
 
-import jobs from "./experiences";
+import experience from "config/social/experience";
 
-const Experiece = () => {
+const Experience = () => {
   const [activeTabId, setActiveTabId] = useState(0);
+
   return (
-    <section id="experience" className={styles.experience}>
+    <StyledJobsSection id="experience">
       <h2 className="numbered-heading">Where I’ve Worked</h2>
-      <div className={styles.inner}>
-        <div role="tablist" className={styles.tabList}>
-          {jobs.map(({ company }, index) => (
-            <button
-              id={`tab-${index}`}
-              tabIndex={activeTabId === index ? 0 : -1}
-              key={index}
-              role="tab"
-              className={clsx([
-                styles.tabButton,
-                activeTabId === index && styles.active,
-              ])}
-              onClick={() => setActiveTabId(index)}
-            >
-              <span>{company}</span>
-            </button>
-          ))}
-          <div
-            style={{
-              transform: `translateY(${activeTabId * 42}px)`,
-            }}
-            className={clsx([styles.highlight])}
-          ></div>
-        </div>
-        <div className={styles.tabPanels}>
-          {jobs.map(
-            (
-              { company, position, dateRange, url, description, achievements },
-              index
-            ) => {
+
+      <div className="inner">
+        <StyledTabList role="tablist" aria-label="Job tabs">
+          {experience &&
+            experience.map(({ company }, i) => {
               return (
-                <div
-                  id={`panel-${index}`}
-                  role="tabpanel"
-                  key={index}
-                  className={styles.tabPanel}
-                  hidden={activeTabId !== index}
+                <StyledTabButton
+                  key={i}
+                  isActive={activeTabId === i}
+                  onClick={() => setActiveTabId(i)}
+                  id={`tab-${i}`}
+                  role="tab"
+                  tabIndex={activeTabId === i ? 0 : -1}
+                  aria-selected={activeTabId === i ? true : false}
+                  aria-controls={`panel-${i}`}
                 >
-                  <h3>
-                    <span>{position}</span>
-                    <span className={styles.company}>
-                      &nbsp;@&nbsp;
-                      <a href={url} target="_blank" className="inline-link">
-                        {company}
-                      </a>
-                    </span>
-                  </h3>
-                  <p className={styles.range}>{dateRange}</p>
-                  <div>
-                    <p>{description}</p>
-                    {achievements && (
-                      <ul>
-                        {achievements.map((value, index) => (
-                          <li key={index}>{value}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
+                  <span>{company}</span>
+                </StyledTabButton>
               );
-            }
-          )}
-        </div>
+            })}
+          <StyledHighlight activeTabId={activeTabId} />
+        </StyledTabList>
+
+        <StyledTabPanels>
+          {experience &&
+            experience.map(
+              (
+                {
+                  company,
+                  achievements,
+                  dateRange,
+                  description,
+                  position,
+                  url,
+                },
+                i
+              ) => {
+                return (
+                  <StyledTabPanel
+                    key={i}
+                    id={`panel-${i}`}
+                    role="tabpanel"
+                    tabIndex={activeTabId === i ? 0 : -1}
+                    aria-labelledby={`tab-${i}`}
+                    aria-hidden={activeTabId !== i}
+                    hidden={activeTabId !== i}
+                  >
+                    <h3>
+                      <span>{position}</span>
+                      <span className="company">
+                        &nbsp;@&nbsp;
+                        <a href={url} className="inline-link">
+                          {company}
+                        </a>
+                      </span>
+                    </h3>
+
+                    <p className="range">{dateRange}</p>
+                    <div>
+                      <p>{description}</p>
+                    </div>
+                  </StyledTabPanel>
+                );
+              }
+            )}
+        </StyledTabPanels>
       </div>
-    </section>
+    </StyledJobsSection>
   );
 };
 
-export default Experiece;
+export default Experience;

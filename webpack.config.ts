@@ -3,7 +3,6 @@ import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -32,33 +31,6 @@ const configuration: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.less$/,
-        use: [
-          {
-            loader: isDevelopment
-              ? "style-loader"
-              : MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: {
-                auto: /styles\.less$/,
-              },
-            },
-          },
-          {
-            loader: "less-loader",
-            options: {
-              lessOptions: {
-                javascriptEnabled: true,
-                paths: [path.resolve(__dirname, "src")],
-              },
-            },
-          },
-        ],
-      },
-      {
         test: /\.(jpe?g|png|gif|svg)$/,
         type: "asset/resource",
         generator: {
@@ -81,18 +53,25 @@ const configuration: Configuration = {
       components: path.resolve(__dirname, "src", "components"),
       theme: path.resolve(__dirname, "src", "theme"),
       assets: path.resolve(__dirname, "src", "assets"),
+      config: path.resolve(__dirname, "src", "config"),
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
-    ...(!isDevelopment && [
-      new MiniCssExtractPlugin({
-        filename: "[name].css",
-      }),
-    ]),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
+  },
 };
 
 export default configuration;

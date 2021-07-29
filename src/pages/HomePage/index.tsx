@@ -1,19 +1,24 @@
 import React, { Fragment } from "react";
+import styled from "styled-components";
 
 import Hero from "components/sections/Hero";
 import About from "components/sections/About";
-import Experiece from "components/sections/Experience";
+import Experience from "components/sections/Experience";
 import Contact from "components/sections/Contact";
+
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`;
 
 const HomePage = () => {
   return (
     <Fragment>
-      <main className="fillHeight">
+      <StyledMainContainer className="fillHeight">
         <Hero />
         <About />
-        <Experiece />
+        <Experience />
         <Contact />
-      </main>
+      </StyledMainContainer>
     </Fragment>
   );
 };
