@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About section should render correctly 1`] = `
+<section
+  className="sc-bdnxRM FnUsK"
+  id="about"
+>
+  <h2
+    className="numbered-heading"
+  >
+    About Me
+  </h2>
+  <div
+    className="inner"
+  >
+    <div
+      className="sc-gtsrHT fLKucx"
+    >
+      <div>
+        <p>
+          Hello! My name is Evgheni and I enjoy creating things that live on the internet. My interest in web development started back in 2013 when I decided to try making personal blog — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+        </p>
+        <p>
+          Here are a few technologies I've been working with recently:
+        </p>
+      </div>
+      <ul
+        className="skills-list"
+      >
+        <li>
+          JavaScript (ES6+)
+        </li>
+        <li>
+          React
+        </li>
+        <li>
+          Node.js
+        </li>
+        <li>
+          Cypress
+        </li>
+      </ul>
+    </div>
+    <div
+      className="sc-dlnjwi evobQn"
+    >
+      <div
+        className="wrapper"
+      >
+        <img
+          className="img"
+          src={
+            Object {
+              "process": [Function],
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
