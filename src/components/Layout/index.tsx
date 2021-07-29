@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import styled from "styled-components";
 
 import Social from "components/Social";
+import Email from "components/Email";
 
 // import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 
@@ -16,9 +17,11 @@ const Layout = (props) => {
     <Fragment>
       <StyledContent>
         <Social />
+
+        <Email />
         {/* <Nav isHome={isHome} />
         
-        <Email isHome={isHome} /> */}
+         */}
         <div id="content">
           {props.children}
           {/* <Footer /> */}
