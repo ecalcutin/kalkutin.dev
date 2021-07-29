@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import { StyledHeader, StyledLinks, StyledNav } from "./styles";
+import { LOADER_DELAY } from "config/utils";
+
 import IconLogo from "./logo";
+import navLinks from "./links";
+import { StyledHeader, StyledLinks, StyledNav } from "./styles";
 
 const Logo = () => {
   return (
@@ -14,22 +18,40 @@ const Logo = () => {
 };
 
 const Nav = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  useLayoutEffect(() => {
+    setIsMounted(true);
+  });
   return (
     <StyledHeader>
       <StyledNav>
-        <Logo />
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={"fade"} timeout={LOADER_DELAY}>
+              <Logo />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
 
         <StyledLinks>
           <ol>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <TransitionGroup component={null}>
+              {isMounted &&
+                navLinks.map(({ name, url }, index) => (
+                  <CSSTransition
+                    key={index}
+                    timeout={LOADER_DELAY}
+                    classNames="fadedown"
+                  >
+                    <li
+                      key={index}
+                      style={{ transitionDelay: `${index + 1}00ms` }}
+                    >
+                      <a href={url}>{name}</a>
+                    </li>
+                  </CSSTransition>
+                ))}
+            </TransitionGroup>
           </ol>
         </StyledLinks>
       </StyledNav>
