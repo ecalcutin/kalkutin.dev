@@ -9,11 +9,13 @@ const About = () => {
     "JavaScript (ES6+)",
     "Typescript",
     "Nest.js",
+    "MongoDB",
     "React",
     "Vue",
     "Angular",
-    "Cypress",
-    "Jest",
+    "RxJS",
+    "Jest & Cypress",
+    "Webpack",
     "Docker",
   ];
 

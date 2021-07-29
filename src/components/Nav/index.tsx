@@ -6,7 +6,7 @@ import IconLogo from "./logo";
 const Logo = () => {
   return (
     <div className="logo" tabIndex={-1}>
-      <a href="#">
+      <a href="/">
         <IconLogo />
       </a>
     </div>
