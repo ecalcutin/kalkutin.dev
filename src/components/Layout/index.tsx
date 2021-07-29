@@ -1,10 +1,9 @@
-import React, { useState, Fragment } from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import Social from "components/Social";
 import Email from "components/Email";
-
-// import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import Nav from "components/Nav";
 
 const StyledContent = styled.div`
   display: flex;
@@ -16,12 +15,9 @@ const Layout = (props) => {
   return (
     <Fragment>
       <StyledContent>
+        <Nav />
         <Social />
-
         <Email />
-        {/* <Nav isHome={isHome} />
-        
-         */}
         <div id="content">
           {props.children}
           {/* <Footer /> */}
