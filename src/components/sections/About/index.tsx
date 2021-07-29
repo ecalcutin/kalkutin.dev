@@ -4,7 +4,18 @@ import profilePic from "assets/images/profile.jpg";
 import { StyledAboutSection, StyledPic, StyledText } from "./styles";
 
 const About = () => {
-  const skills = ["JavaScript (ES6+)", "React", "Node.js", "Cypress"];
+  const skills = [
+    "Node.js",
+    "JavaScript (ES6+)",
+    "Typescript",
+    "Nest.js",
+    "React",
+    "Vue",
+    "Angular",
+    "Cypress",
+    "Jest",
+    "Docker",
+  ];
 
   return (
     <StyledAboutSection id="about">

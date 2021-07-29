@@ -28,16 +28,34 @@ exports[`About section should render correctly 1`] = `
         className="skills-list"
       >
         <li>
+          Node.js
+        </li>
+        <li>
           JavaScript (ES6+)
+        </li>
+        <li>
+          Typescript
+        </li>
+        <li>
+          Nest.js
         </li>
         <li>
           React
         </li>
         <li>
-          Node.js
+          Vue
+        </li>
+        <li>
+          Angular
         </li>
         <li>
           Cypress
+        </li>
+        <li>
+          Jest
+        </li>
+        <li>
+          Docker
         </li>
       </ul>
     </div>
