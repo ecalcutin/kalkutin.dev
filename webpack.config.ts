@@ -59,6 +59,7 @@ const configuration: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
+      favicon: "src/assets/images/kalkutin.dev.ico",
     }),
   ],
   optimization: {

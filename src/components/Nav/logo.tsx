@@ -4,7 +4,7 @@ const IconLogo = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692.46 799.59">
     <polygon
       stroke="currentColor"
-      stroke-width="40"
+      strokeWidth="40"
       points="15 208.56 15 591.03 346.23 782.27 677.46 591.03 677.46 208.56 346.23 17.32 15 208.56"
     />
     <rect
