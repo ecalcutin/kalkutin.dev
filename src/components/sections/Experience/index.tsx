@@ -78,6 +78,13 @@ const Experience = () => {
                     <div>
                       <p>{description}</p>
                     </div>
+                    <div style={{ marginTop: 24 }}>
+                      <ul>
+                        {achievements.map((achievement, index) => (
+                          <li key={index}>{achievement}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </StyledTabPanel>
                 );
               }
