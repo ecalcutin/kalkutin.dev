@@ -53,6 +53,7 @@ const configuration: Configuration = {
       components: path.resolve(__dirname, "src", "components"),
       theme: path.resolve(__dirname, "src", "theme"),
       assets: path.resolve(__dirname, "src", "assets"),
+      config: path.resolve(__dirname, "src", "config"),
     },
   },
   plugins: [
