@@ -40,6 +40,9 @@ exports[`About section should render correctly 1`] = `
           Nest.js
         </li>
         <li>
+          MongoDB
+        </li>
+        <li>
           React
         </li>
         <li>
@@ -49,10 +52,13 @@ exports[`About section should render correctly 1`] = `
           Angular
         </li>
         <li>
-          Cypress
+          RxJS
         </li>
         <li>
-          Jest
+          Jest & Cypress
+        </li>
+        <li>
+          Webpack
         </li>
         <li>
           Docker
