@@ -37,7 +37,7 @@ const Nav = () => {
           <ol>
             <TransitionGroup component={null}>
               {isMounted &&
-                navLinks.map(({ name, url }, index) => (
+                navLinks.map(({ name, url, target }, index) => (
                   <CSSTransition
                     key={index}
                     timeout={LOADER_DELAY}
@@ -47,7 +47,9 @@ const Nav = () => {
                       key={index}
                       style={{ transitionDelay: `${index + 1}00ms` }}
                     >
-                      <a href={url}>{name}</a>
+                      <a target={(target && target) || "_self"} href={url}>
+                        {name}
+                      </a>
                     </li>
                   </CSSTransition>
                 ))}
