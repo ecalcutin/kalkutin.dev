@@ -24,7 +24,7 @@ services:
     image: ghost:4-alpine
     restart: always
     ports:
-      - 8000:2368
+      - 8000:80
     depends_on:
       - ghostdb
     environment:
