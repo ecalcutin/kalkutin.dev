@@ -10,8 +10,6 @@ services:
     ports:
       - 80:80
       - 443:443
-    networks:
-      - net1
     volumes:
       - letsencrypt:/etc/letsencrypt
       - ./nginx:/etc/nginx/user_conf.d
@@ -21,16 +19,12 @@ services:
     restart: always
     ports:
       - 8080:80
-    networks:
-      - net1
 
   ghostblog:
     image: ghost:4-alpine
     restart: always
     ports:
       - 8000:2368
-    networks:
-      - net1
     depends_on:
       - ghostdb
     environment:
@@ -45,13 +39,8 @@ services:
   ghostdb:
     image: mysql:5.7
     restart: always
-    networks:
-      - net1
     environment:
       MYSQL_ROOT_PASSWORD: ${GHOST_DB_PASS}
 
 volumes:
   letsencrypt:
-networks:
-  net1:
-    driver: bridge
