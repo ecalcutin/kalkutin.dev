@@ -29,7 +29,7 @@ services:
       - ghostdb
     volumes:
       - ./ghostdata:/var/lib/ghost/content
-    # environment:
+    environment:
     #   database__client: mysql
     #   database__connection__host: ghostdb
     #   database__connection__database: ghost
