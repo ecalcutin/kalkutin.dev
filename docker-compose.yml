@@ -43,6 +43,8 @@ services:
   ghostdb:
     image: mysql:5.7
     restart: always
+    networks:
+      - net1
     environment:
       MYSQL_ROOT_PASSWORD: ${GHOST_DB_PASS}
 
