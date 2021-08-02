@@ -27,6 +27,8 @@ services:
       - 8000:2368
     depends_on:
       - ghostdb
+    volumes:
+      - ghostdata:/bitnami/ghost
     environment:
       database__client: mysql
       database__connection__host: ghostdb
@@ -44,3 +46,5 @@ services:
 
 volumes:
   letsencrypt:
+  ghostdata:
+    driver: local
