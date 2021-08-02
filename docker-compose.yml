@@ -10,7 +10,7 @@ services:
     ports:
       - 80:80
       - 443:443
-    networks: 
+    networks:
       - net1
     volumes:
       - letsencrypt:/etc/letsencrypt
@@ -27,7 +27,7 @@ services:
     restart: always
     ports:
       - 8000:2368
-    networks: 
+    networks:
       - net1
     depends_on:
       - ghostdb
@@ -48,3 +48,6 @@ services:
 
 volumes:
   letsencrypt:
+networks:
+  net1:
+    driver: bridge
