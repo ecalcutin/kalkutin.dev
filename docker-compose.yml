@@ -28,7 +28,7 @@ services:
     depends_on:
       - ghostdb
     volumes:
-      - ghostdata:/var/lib/ghost/content
+      - ./ghostdata:/var/lib/ghost/content
     environment:
       database__client: mysql
       database__connection__host: ghostdb
