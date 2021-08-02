@@ -33,7 +33,7 @@ services:
       database__connection__database: ghost
       database__connection__user: ${GHOST_DB_USER}
       database__connection__password: ${GHOST_DB_PASS}
-      url: http://localhost:8000
+      url: https://blog.kalkutin.dev
       #NODE_ENV: development
 
   ghostdb:
