@@ -21,6 +21,8 @@ services:
     restart: always
     ports:
       - 8080:80
+    networks:
+      - net1
 
   ghostblog:
     image: ghost:4-alpine
