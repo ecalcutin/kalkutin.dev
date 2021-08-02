@@ -28,7 +28,7 @@ services:
     depends_on:
       - ghostdb
     volumes:
-      - ghostdata:/bitnami/ghost
+      - ghostdata:/var/lib/ghost/content
     environment:
       database__client: mysql
       database__connection__host: ghostdb
