@@ -20,5 +20,27 @@ services:
     ports:
       - 8080:80
 
+  ghost:
+    image: ghost:4-alpine
+    restart: always
+    ports:
+      - 8080:2368
+    depends_on:
+      - ghostdb
+    environment:
+      database__client: mysql
+      database__connection__host: ghostdb
+      database__connection__database: ghost
+      database__connection__user: ${GHOST_DB_USER}
+      database__connection__password: ${GHOST_DB_PASS}
+      url: https://blog.kalkutin.dev
+      #NODE_ENV: development
+
+  ghostdb:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${GHOST_DB_PASS}
+
 volumes:
   letsencrypt:
