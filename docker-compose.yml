@@ -20,7 +20,7 @@ services:
     ports:
       - 8080:80
 
-  ghost:
+  ghostblog:
     image: ghost:4-alpine
     restart: always
     ports:
