@@ -1,32 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Side bar should render correctly 1`] = `
-<div
-  className="sc-bdnxRM bFZpkQ"
-  orientation="left"
->
-  content
-</div>
-`;
-
-exports[`Side bar should render correctly on left 1`] = `
-<div
-  className="sc-bdnxRM bFZpkQ"
-  orientation="left"
->
-  content
-</div>
-`;
-
-exports[`Side bar should render correctly on right 1`] = `
-<div
-  className="sc-bdnxRM kmaXNM"
-  orientation="right"
->
-  content
-</div>
-`;
-
 exports[`Sidebar should render correctly on left 1`] = `
 <div
   className="sc-bdnxRM bFZpkQ"
