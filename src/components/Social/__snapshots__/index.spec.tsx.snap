@@ -2,11 +2,11 @@
 
 exports[`Social links should render correctly 1`] = `
 <div
-  className="sc-bdnxRM bFZpkQ"
+  className="sc-bdfBQB hVPydH"
   orientation="left"
 >
   <ul
-    className="sc-gtsrHT hJdvQD"
+    className="sc-gsTEea jhCORF"
   >
     <li>
       <a

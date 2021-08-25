@@ -2,7 +2,7 @@
 
 exports[`Experience section should render correctly 1`] = `
 <section
-  className="sc-bdnxRM ctxXgU"
+  className="sc-bdfBQB jkLvXf"
   id="experience"
 >
   <h2
@@ -15,13 +15,13 @@ exports[`Experience section should render correctly 1`] = `
   >
     <div
       aria-label="Job tabs"
-      className="sc-gtsrHT dagQDy"
+      className="sc-gsTEea gYLxuY"
       role="tablist"
     >
       <button
         aria-controls="panel-0"
         aria-selected={true}
-        className="sc-dlnjwi dxyHxU"
+        className="sc-dlfnuX lnfZHq"
         id="tab-0"
         onClick={[Function]}
         role="tab"
@@ -34,7 +34,7 @@ exports[`Experience section should render correctly 1`] = `
       <button
         aria-controls="panel-1"
         aria-selected={false}
-        className="sc-dlnjwi fPkXFc"
+        className="sc-dlfnuX egPkXS"
         id="tab-1"
         onClick={[Function]}
         role="tab"
@@ -47,7 +47,7 @@ exports[`Experience section should render correctly 1`] = `
       <button
         aria-controls="panel-2"
         aria-selected={false}
-        className="sc-dlnjwi fPkXFc"
+        className="sc-dlfnuX egPkXS"
         id="tab-2"
         onClick={[Function]}
         role="tab"
@@ -60,7 +60,7 @@ exports[`Experience section should render correctly 1`] = `
       <button
         aria-controls="panel-3"
         aria-selected={false}
-        className="sc-dlnjwi fPkXFc"
+        className="sc-dlfnuX egPkXS"
         id="tab-3"
         onClick={[Function]}
         role="tab"
@@ -71,16 +71,16 @@ exports[`Experience section should render correctly 1`] = `
         </span>
       </button>
       <div
-        className="sc-hKFxyN hqUePW"
+        className="sc-hKgJUU ktlWjT"
       />
     </div>
     <div
-      className="sc-eCApnc ehcuRD"
+      className="sc-eCstlR jUdGBb"
     >
       <div
         aria-hidden={false}
         aria-labelledby="tab-0"
-        className="sc-jSFjdj iJJvTX"
+        className="sc-jSgvzq gYpxG"
         hidden={false}
         id="panel-0"
         role="tabpanel"
@@ -135,7 +135,7 @@ exports[`Experience section should render correctly 1`] = `
       <div
         aria-hidden={true}
         aria-labelledby="tab-1"
-        className="sc-jSFjdj iJJvTX"
+        className="sc-jSgvzq gYpxG"
         hidden={true}
         id="panel-1"
         role="tabpanel"
@@ -190,7 +190,7 @@ exports[`Experience section should render correctly 1`] = `
       <div
         aria-hidden={true}
         aria-labelledby="tab-2"
-        className="sc-jSFjdj iJJvTX"
+        className="sc-jSgvzq gYpxG"
         hidden={true}
         id="panel-2"
         role="tabpanel"
@@ -248,7 +248,7 @@ exports[`Experience section should render correctly 1`] = `
       <div
         aria-hidden={true}
         aria-labelledby="tab-3"
-        className="sc-jSFjdj iJJvTX"
+        className="sc-jSgvzq gYpxG"
         hidden={true}
         id="panel-3"
         role="tabpanel"

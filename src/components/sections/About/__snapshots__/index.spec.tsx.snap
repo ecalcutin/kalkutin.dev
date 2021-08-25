@@ -2,7 +2,7 @@
 
 exports[`About section should render correctly 1`] = `
 <section
-  className="sc-bdnxRM FnUsK"
+  className="sc-bdfBQB cuueVh"
   id="about"
 >
   <h2
@@ -14,7 +14,7 @@ exports[`About section should render correctly 1`] = `
     className="inner"
   >
     <div
-      className="sc-gtsrHT fLKucx"
+      className="sc-gsTEea iaSScP"
     >
       <div>
         <p>
@@ -66,7 +66,7 @@ exports[`About section should render correctly 1`] = `
       </ul>
     </div>
     <div
-      className="sc-dlnjwi evobQn"
+      className="sc-dlfnuX deIEGB"
     >
       <div
         className="wrapper"

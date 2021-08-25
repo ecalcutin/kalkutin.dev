@@ -2,7 +2,7 @@
 
 exports[`Sidebar should render correctly on left 1`] = `
 <div
-  className="sc-bdnxRM bFZpkQ"
+  className="sc-bdfBQB hVPydH"
   orientation="left"
 >
   content
@@ -11,7 +11,7 @@ exports[`Sidebar should render correctly on left 1`] = `
 
 exports[`Sidebar should render correctly on right 1`] = `
 <div
-  className="sc-bdnxRM kmaXNM"
+  className="sc-bdfBQB jpUEof"
   orientation="right"
 >
   content
