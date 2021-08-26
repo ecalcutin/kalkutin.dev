@@ -3,6 +3,7 @@ import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import PrerenderSPAPlugin from "@dreysolano/prerender-spa-plugin";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
@@ -60,6 +61,10 @@ const configuration: Configuration = {
     new HtmlWebpackPlugin({
       template: "public/index.html",
       favicon: "src/assets/images/kalkutin.dev.ico",
+    }),
+    new PrerenderSPAPlugin({
+      staticDir: path.join(__dirname, "dist"),
+      routes: ["/"],
     }),
   ],
   optimization: {
