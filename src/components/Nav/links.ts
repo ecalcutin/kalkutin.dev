@@ -4,6 +4,10 @@ const navLinks = [
     url: "/#about",
   },
   {
+    name: "Certifications",
+    url: "/#certifications",
+  },
+  {
     name: "Experience",
     url: "/#experience",
   },
