@@ -5,6 +5,8 @@ import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-serv
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import PrerenderSPAPlugin from "@dreysolano/prerender-spa-plugin";
 
+process.stdout.write(`Building for ${process.env.NODE_ENV}...\n`);
+
 const isDevelopment = process.env.NODE_ENV === "development";
 
 interface Configuration extends WebpackConfiguration {
@@ -21,6 +23,7 @@ const configuration: Configuration = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     filename: "[name].bundle.js",
     clean: true,
   },
