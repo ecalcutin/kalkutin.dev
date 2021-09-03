@@ -28,7 +28,7 @@ exports[`Experience section should render correctly 1`] = `
         tabIndex={0}
       >
         <span>
-          Qwil Messenger
+          Grid Dynamics
         </span>
       </button>
       <button
@@ -41,7 +41,7 @@ exports[`Experience section should render correctly 1`] = `
         tabIndex={-1}
       >
         <span>
-          Code Factory
+          Qwil Messenger
         </span>
       </button>
       <button
@@ -54,7 +54,7 @@ exports[`Experience section should render correctly 1`] = `
         tabIndex={-1}
       >
         <span>
-          Endava
+          Code Factory
         </span>
       </button>
       <button
@@ -62,6 +62,19 @@ exports[`Experience section should render correctly 1`] = `
         aria-selected={false}
         className="sc-dlfnuX egPkXS"
         id="tab-3"
+        onClick={[Function]}
+        role="tab"
+        tabIndex={-1}
+      >
+        <span>
+          Endava
+        </span>
+      </button>
+      <button
+        aria-controls="panel-4"
+        aria-selected={false}
+        className="sc-dlfnuX egPkXS"
+        id="tab-4"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
@@ -85,6 +98,61 @@ exports[`Experience section should render correctly 1`] = `
         id="panel-0"
         role="tabpanel"
         tabIndex={0}
+      >
+        <h3>
+          <span>
+            Team Lead
+          </span>
+          <span
+            className="company"
+          >
+             @ 
+            <a
+              className="inline-link"
+              href="https://www.griddynamics.com/"
+            >
+              Grid Dynamics
+            </a>
+          </span>
+        </h3>
+        <p
+          className="range"
+        >
+          MAR 2020 - Present
+        </p>
+        <div>
+          <p>
+            Building email sources & delivering optimization
+          </p>
+        </div>
+        <div
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        >
+          <ul>
+            <li>
+              Team leading
+            </li>
+            <li>
+              Improvement development flow
+            </li>
+            <li>
+              Performance optimization
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        aria-hidden={true}
+        aria-labelledby="tab-1"
+        className="sc-jSgvzq gYpxG"
+        hidden={true}
+        id="panel-1"
+        role="tabpanel"
+        tabIndex={-1}
       >
         <h3>
           <span>
@@ -134,10 +202,10 @@ exports[`Experience section should render correctly 1`] = `
       </div>
       <div
         aria-hidden={true}
-        aria-labelledby="tab-1"
+        aria-labelledby="tab-2"
         className="sc-jSgvzq gYpxG"
         hidden={true}
-        id="panel-1"
+        id="panel-2"
         role="tabpanel"
         tabIndex={-1}
       >
@@ -189,10 +257,10 @@ exports[`Experience section should render correctly 1`] = `
       </div>
       <div
         aria-hidden={true}
-        aria-labelledby="tab-2"
+        aria-labelledby="tab-3"
         className="sc-jSgvzq gYpxG"
         hidden={true}
-        id="panel-2"
+        id="panel-3"
         role="tabpanel"
         tabIndex={-1}
       >
@@ -247,10 +315,10 @@ exports[`Experience section should render correctly 1`] = `
       </div>
       <div
         aria-hidden={true}
-        aria-labelledby="tab-3"
+        aria-labelledby="tab-4"
         className="sc-jSgvzq gYpxG"
         hidden={true}
-        id="panel-3"
+        id="panel-4"
         role="tabpanel"
         tabIndex={-1}
       >
