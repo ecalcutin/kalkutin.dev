@@ -1,5 +1,17 @@
 export default [
   {
+    company: "Grid Dynamics",
+    position: "Team Lead",
+    dateRange: "MAR 2020 - Present",
+    url: "https://www.griddynamics.com/",
+    description: "Building email sources & delivering optimization",
+    achievements: [
+      "Team leading",
+      "Improvement development flow",
+      "Performance optimization",
+    ],
+  },
+  {
     company: "Qwil Messenger",
     position: "Engineer",
     dateRange: "JUN 2020 - JAN 2021",

@@ -21,7 +21,7 @@ const Footer = () => {
 
       <StyledCredit>
         <a href="https://github.com/ecalcutin/resume">
-          <div>Designed &amp; Built by Evgheni Calcutin</div>
+          <div>Designed &amp; Built by Evgenii Kalkutin</div>
         </a>
       </StyledCredit>
     </StyledFooter>

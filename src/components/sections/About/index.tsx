@@ -27,7 +27,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Evgheni and I enjoy creating things that live on
+              Hello! My name is Evgenii and I enjoy creating things that live on
               the internet. My interest in web development started back in 2013
               when I decided to try making personal blog — turns out hacking
               together a custom reblog button taught me a lot about HTML &amp;
