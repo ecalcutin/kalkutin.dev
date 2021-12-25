@@ -9,6 +9,7 @@ export default [
       "Team leading",
       "Improvement development flow",
       "Performance optimization",
+      "Automated Visual Regression Testing"
     ],
   },
   {
