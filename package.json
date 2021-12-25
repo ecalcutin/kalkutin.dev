@@ -8,7 +8,8 @@
     "docker:build": "docker build -t ecalcutin/kalkutin.dev-website:latest . && docker push ecalcutin/kalkutin.dev-website:latest",
     "start": "http-server dist",
     "ncu": "npm-check-updates",
-    "test": "jest"
+    "test": "jest",
+    "test:e2e": "cypress open"
   },
   "repository": {
     "type": "git",
