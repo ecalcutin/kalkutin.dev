@@ -8,9 +8,26 @@ import PrerenderSPAPlugin from "@dreysolano/prerender-spa-plugin";
 process.stdout.write(`Building for ${process.env.NODE_ENV}...\n`);
 
 const isDevelopment = process.env.NODE_ENV === "development";
+const isProduction = process.env.NODE_ENV === "production";
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
+}
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    template: "public/index.html",
+    favicon: "src/assets/images/kalkutin.dev.ico",
+  }),
+];
+
+if (isProduction) {
+  plugins.push(
+    new PrerenderSPAPlugin({
+      staticDir: path.join(__dirname, "dist"),
+      routes: ["/"],
+    })
+  );
 }
 
 const configuration: Configuration = {
@@ -60,16 +77,7 @@ const configuration: Configuration = {
       config: path.resolve(__dirname, "src", "config"),
     },
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "public/index.html",
-      favicon: "src/assets/images/kalkutin.dev.ico",
-    }),
-    new PrerenderSPAPlugin({
-      staticDir: path.join(__dirname, "dist"),
-      routes: ["/"],
-    }),
-  ],
+  plugins,
   optimization: {
     splitChunks: {
       cacheGroups: {
