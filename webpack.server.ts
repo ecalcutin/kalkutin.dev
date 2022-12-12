@@ -5,7 +5,7 @@ import nodeExternals from "webpack-node-externals";
 import sharedConfig from "./webpack.base";
 
 export default merge<Configuration>(sharedConfig, {
-  entry: "./src/server.tsx",
+  entry: "./src/server/index.tsx",
   target: "node",
   externals: [nodeExternals()],
   output: {
