@@ -3,7 +3,6 @@ import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import PrerenderSPAPlugin from "@dreysolano/prerender-spa-plugin";
 
 process.stdout.write(`Building for ${process.env.NODE_ENV}...\n`);
 
@@ -20,15 +19,6 @@ const plugins = [
     favicon: "src/assets/images/kalkutin.dev.ico",
   }),
 ];
-
-if (isProduction) {
-  plugins.push(
-    new PrerenderSPAPlugin({
-      staticDir: path.join(__dirname, "dist"),
-      routes: ["/"],
-    })
-  );
-}
 
 const configuration: Configuration = {
   entry: "./src/index.tsx",
