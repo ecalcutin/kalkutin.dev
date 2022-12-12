@@ -38,7 +38,10 @@ const configuration: Configuration = {
     rules: [
       {
         test: /\.(j|t)sx?$/,
-        use: "babel-loader",
+        loader: "esbuild-loader",
+        options: {
+          loader: "tsx",
+        },
         exclude: /node_modules/,
       },
       {
