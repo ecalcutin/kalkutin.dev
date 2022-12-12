@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack serve",
+    "start:dev": "cross-env NODE_ENV=development webpack serve --config webpack.client.ts",
+    "start:prod": "cross-env NODE_ENV=production node build/server.js",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.ts",
+    "build:server": "NODE_ENV=production webpack --config webpack.server.ts",
+    "build": "npm run build:client && npm run build:server",
     "docker:build": "docker build -t ecalcutin/kalkutin.dev-website:latest . && docker push ecalcutin/kalkutin.dev-website:latest",
-    "start": "http-server dist",
-    "ncu": "npm-check-updates",
-    "test": "jest"
+    "ncu": "npm-check-updates"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/ecalcutin/resume#readme",
   "devDependencies": {
+    "@types/express": "^4.17.14",
     "@types/node": "^18.11.13",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -28,6 +30,7 @@
     "@types/styled-components": "^5.1.26",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.1",
+    "@types/webpack-node-externals": "^2.5.3",
     "cross-env": "^7.0.3",
     "esbuild-loader": "^2.20.0",
     "html-webpack-plugin": "^5.5.0",
@@ -36,9 +39,12 @@
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
