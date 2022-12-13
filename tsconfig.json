@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "target": "ES6",
     "sourceMap": true,
     "jsx": "react-jsx",
     "baseUrl": "./src"
