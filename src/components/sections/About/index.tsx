@@ -1,29 +1,30 @@
-import React from "react";
+import React from 'react';
 
-import profilePic from "assets/images/profile.jpg";
-import { StyledAboutSection, StyledPic, StyledText } from "./styles";
+import profilePic from 'assets/images/profile.jpg';
+
+import { StyledAboutSection, StyledPic, StyledText } from './styles';
 
 const About = () => {
   const skills = [
-    "Node.js",
-    "JavaScript (ES6+)",
-    "Typescript",
-    "Nest.js",
-    "MongoDB",
-    "React",
-    "Vue",
-    "Angular",
-    "RxJS",
-    "Jest & Cypress",
-    "Webpack",
-    "Docker",
+    'Node.js',
+    'JavaScript (ES6+)',
+    'Typescript',
+    'Nest.js',
+    'MongoDB',
+    'React',
+    'Vue',
+    'Angular',
+    'RxJS',
+    'Jest & Cypress',
+    'Webpack',
+    'Docker',
   ];
 
   return (
-    <StyledAboutSection id="about">
-      <h2 className="numbered-heading">About Me</h2>
+    <StyledAboutSection id='about'>
+      <h2 className='numbered-heading'>About Me</h2>
 
-      <div className="inner">
+      <div className='inner'>
         <StyledText>
           <div>
             <p>
@@ -34,17 +35,19 @@ const About = () => {
               CSS!
             </p>
 
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>
+              Here are a few technologies I&apos;ve been working with recently:
+            </p>
           </div>
 
-          <ul className="skills-list">
+          <ul className='skills-list'>
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
         </StyledText>
 
         <StyledPic>
-          <div className="wrapper">
-            <img className="img" src={profilePic} />
+          <div className='wrapper'>
+            <img className='img' src={profilePic} />
           </div>
         </StyledPic>
       </div>

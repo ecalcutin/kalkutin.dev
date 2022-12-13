@@ -1,45 +1,15 @@
 import path from "path";
-import { Configuration as WebpackConfiguration } from "webpack";
-import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
-
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import PrerenderSPAPlugin from "@dreysolano/prerender-spa-plugin";
+import { Configuration } from "webpack";
 
 process.stdout.write(`Building for ${process.env.NODE_ENV}...\n`);
 
-const isDevelopment = process.env.NODE_ENV === "development";
 const isProduction = process.env.NODE_ENV === "production";
 
-interface Configuration extends WebpackConfiguration {
-  devServer?: WebpackDevServerConfiguration;
-}
-
-const plugins = [
-  new HtmlWebpackPlugin({
-    template: "public/index.html",
-    favicon: "src/assets/images/kalkutin.dev.ico",
-  }),
-];
-
-if (isProduction) {
-  plugins.push(
-    new PrerenderSPAPlugin({
-      staticDir: path.join(__dirname, "dist"),
-      routes: ["/"],
-    })
-  );
-}
-
 const configuration: Configuration = {
-  entry: "./src/index.tsx",
-  target: "web",
-  mode: isDevelopment ? "development" : "production",
-  devtool: isDevelopment ? "eval-cheap-module-source-map" : "source-map",
-  devServer: {
-    port: 8080,
-  },
+  mode: isProduction ? "production" : "development",
+  devtool: isProduction ? "source-map" : "eval-cheap-module-source-map",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     publicPath: "/",
     filename: "[name].bundle.js",
     clean: true,
@@ -48,7 +18,10 @@ const configuration: Configuration = {
     rules: [
       {
         test: /\.(j|t)sx?$/,
-        use: "babel-loader",
+        loader: "esbuild-loader",
+        options: {
+          loader: "tsx",
+        },
         exclude: /node_modules/,
       },
       {
@@ -77,7 +50,6 @@ const configuration: Configuration = {
       config: path.resolve(__dirname, "src", "config"),
     },
   },
-  plugins,
   optimization: {
     splitChunks: {
       cacheGroups: {

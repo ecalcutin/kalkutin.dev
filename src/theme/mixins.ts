@@ -25,19 +25,19 @@ const button = css`
 `;
 
 const mixins = {
-    flexCenter: css`
+  flexCenter: css`
     display: flex;
     justify-content: center;
     align-items: center;
   `,
 
-    flexBetween: css`
+  flexBetween: css`
     display: flex;
     justify-content: space-between;
     align-items: center;
   `,
 
-    link: css`
+  link: css`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
@@ -52,7 +52,7 @@ const mixins = {
     }
   `,
 
-    inlineLink: css`
+  inlineLink: css`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
@@ -85,9 +85,9 @@ const mixins = {
     }
   `,
 
-    button,
+  button,
 
-    smallButton: css`
+  smallButton: css`
     color: var(--green);
     background-color: transparent;
     border: 1px solid var(--green);
@@ -110,7 +110,7 @@ const mixins = {
     }
   `,
 
-    bigButton: css`
+  bigButton: css`
     color: var(--green);
     background-color: transparent;
     border: 1px solid var(--green);
@@ -133,7 +133,7 @@ const mixins = {
     }
   `,
 
-    boxShadow: css`
+  boxShadow: css`
     box-shadow: 0 10px 30px -15px var(--navy-shadow);
     transition: var(--transition);
 
@@ -143,7 +143,7 @@ const mixins = {
     }
   `,
 
-    fancyList: css`
+  fancyList: css`
     padding: 0;
     margin: 0;
     list-style: none;
@@ -161,7 +161,7 @@ const mixins = {
     }
   `,
 
-    resetList: css`
+  resetList: css`
     list-style: none;
     padding: 0;
     margin: 0;

@@ -1,1 +1,1 @@
-export default "evgheni.calcutin@gmail.com";
+export default 'evgheni.calcutin@gmail.com';

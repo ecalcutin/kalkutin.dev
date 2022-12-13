@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledJobsSection = styled.section`
   max-width: 700px;
@@ -68,7 +68,7 @@ export const StyledTabButton = styled.button<{ isActive: boolean }>`
   padding: 0 20px 2px;
   border-left: 2px solid var(--lightest-navy);
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? "var(--green)" : "var(--slate)")};
+  color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;

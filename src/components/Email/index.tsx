@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { StyledLinkWrapper } from "./styles";
+import email from 'config/social/email';
+import Side from 'components/Side';
 
-import email from "config/social/email";
-import Side from "components/Side";
+import { StyledLinkWrapper } from './styles';
 
 const Email = () => (
-  <Side orientation="right">
+  <Side orientation='right'>
     <StyledLinkWrapper>
       <a href={`mailto:${email}`}>{email}</a>
     </StyledLinkWrapper>

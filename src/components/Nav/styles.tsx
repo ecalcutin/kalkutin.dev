@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -80,7 +80,7 @@ export const StyledLinks = styled.div`
         padding: 10px;
 
         &:before {
-          content: "0" counter(item) ".";
+          content: '0' counter(item) '.';
           margin-right: 5px;
           color: var(--green);
           font-size: var(--fz-xxs);
