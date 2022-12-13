@@ -9,7 +9,11 @@
     "start:dev": "cross-env NODE_ENV=development webpack serve --config webpack.client.ts",
     "start:prod": "cross-env NODE_ENV=production node build/server.js",
     "docker:build": "docker build -t ecalcutin/kalkutin.dev-website:latest . && docker push ecalcutin/kalkutin.dev-website:latest",
-    "ncu": "npm-check-updates"
+    "ncu": "npm-check-updates",
+    "lint": "eslint {src/**/*.js,src/**/*.jsx,src/**/*.tsx,src/**/*.ts,}",
+    "prettier": "prettier --check ./src/**/*.{ts,tsx}",
+    "prettier:w": "npm run prettier -- --write",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,10 +35,18 @@
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.1",
     "@types/webpack-node-externals": "^2.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
     "cross-env": "^7.0.3",
     "esbuild-loader": "^2.20.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.31.11",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "npm-check-updates": "^16.5.6",
+    "prettier": "^2.8.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
@@ -50,5 +62,11 @@
     "react-icons": "^4.7.1",
     "react-transition-group": "^4.4.5",
     "styled-components": "^5.3.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
