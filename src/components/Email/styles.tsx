@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledLinkWrapper = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const StyledLinkWrapper = styled.div`
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 90px;

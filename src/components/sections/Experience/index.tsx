@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+
+import experience from 'config/social/experience';
 
 import {
   StyledHighlight,
@@ -8,19 +10,17 @@ import {
   StyledTabList,
   StyledTabPanel,
   StyledTabPanels,
-} from "./styles";
-
-import experience from "config/social/experience";
+} from './styles';
 
 const Experience = () => {
   const [activeTabId, setActiveTabId] = useState(0);
 
   return (
-    <StyledJobsSection id="experience">
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+    <StyledJobsSection id='experience'>
+      <h2 className='numbered-heading'>Where I’ve Worked</h2>
 
-      <div className="inner">
-        <StyledTabList role="tablist" aria-label="Job tabs">
+      <div className='inner'>
+        <StyledTabList role='tablist' aria-label='Job tabs'>
           {experience &&
             experience.map(({ company }, i) => {
               return (
@@ -29,7 +29,7 @@ const Experience = () => {
                   isActive={activeTabId === i}
                   onClick={() => setActiveTabId(i)}
                   id={`tab-${i}`}
-                  role="tab"
+                  role='tab'
                   tabIndex={activeTabId === i ? 0 : -1}
                   aria-selected={activeTabId === i ? true : false}
                   aria-controls={`panel-${i}`}
@@ -60,11 +60,11 @@ const Experience = () => {
                     key={i}
                     in={activeTabId === i}
                     timeout={250}
-                    classNames="fade"
+                    classNames='fade'
                   >
                     <StyledTabPanel
                       id={`panel-${i}`}
-                      role="tabpanel"
+                      role='tabpanel'
                       tabIndex={activeTabId === i ? 0 : -1}
                       aria-labelledby={`tab-${i}`}
                       aria-hidden={activeTabId !== i}
@@ -72,15 +72,15 @@ const Experience = () => {
                     >
                       <h3>
                         <span>{position}</span>
-                        <span className="company">
+                        <span className='company'>
                           &nbsp;@&nbsp;
-                          <a href={url} className="inline-link">
+                          <a href={url} className='inline-link'>
                             {company}
                           </a>
                         </span>
                       </h3>
 
-                      <p className="range">{dateRange}</p>
+                      <p className='range'>{dateRange}</p>
                       <div>
                         <p>{description}</p>
                       </div>

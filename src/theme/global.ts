@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import fonts from "./fonts";
-import variables from "./variables";
-import TransitionStyles from "./transitions";
+import fonts from './fonts';
+import variables from './variables';
+import TransitionStyles from './transitions';
 
 const GlobalStyle = createGlobalStyle`
   ${fonts};

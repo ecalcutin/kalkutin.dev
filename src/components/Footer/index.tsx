@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import socialMedia from "config/social/social-media";
-import { StyledCredit, StyledFooter, StyledSocialLinks } from "./styles";
+import socialMedia from 'config/social/social-media';
+
+import { StyledCredit, StyledFooter, StyledSocialLinks } from './styles';
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
       </StyledSocialLinks>
 
       <StyledCredit>
-        <a href="https://github.com/ecalcutin/resume">
+        <a href='https://github.com/ecalcutin/resume'>
           <div>Designed &amp; Built by Evgenii Kalkutin</div>
         </a>
       </StyledCredit>

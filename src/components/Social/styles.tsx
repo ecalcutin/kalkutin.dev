@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledSocialList = styled.ul`
   display: flex;
@@ -9,7 +9,7 @@ export const StyledSocialList = styled.ul`
   list-style: none;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 90px;

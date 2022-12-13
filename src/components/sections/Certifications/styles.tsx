@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledCertificationsSection = styled.section`
   max-width: 800px;
@@ -42,7 +42,8 @@ export const StyledCertificationsSection = styled.section`
       height: 700px;
     }
 
-    a, div {
+    a,
+    div {
       max-width: 200px;
       margin: 0 auto;
 

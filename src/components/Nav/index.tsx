@@ -1,16 +1,16 @@
-import React, { useLayoutEffect, useState } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import React, { useLayoutEffect, useState } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import { LOADER_DELAY } from "config/utils";
+import { LOADER_DELAY } from 'config/utils';
 
-import IconLogo from "./logo";
-import navLinks from "./links";
-import { StyledHeader, StyledLinks, StyledNav } from "./styles";
+import IconLogo from './logo';
+import navLinks from './links';
+import { StyledHeader, StyledLinks, StyledNav } from './styles';
 
 const Logo = () => {
   return (
-    <div className="logo" tabIndex={-1}>
-      <a href="/">
+    <div className='logo' tabIndex={-1}>
+      <a href='/'>
         <IconLogo />
       </a>
     </div>
@@ -27,7 +27,7 @@ const Nav = () => {
       <StyledNav>
         <TransitionGroup component={null}>
           {isMounted && (
-            <CSSTransition classNames={"fade"} timeout={LOADER_DELAY}>
+            <CSSTransition classNames={'fade'} timeout={LOADER_DELAY}>
               <Logo />
             </CSSTransition>
           )}
@@ -41,13 +41,13 @@ const Nav = () => {
                   <CSSTransition
                     key={index}
                     timeout={LOADER_DELAY}
-                    classNames="fadedown"
+                    classNames='fadedown'
                   >
                     <li
                       key={index}
                       style={{ transitionDelay: `${index + 1}00ms` }}
                     >
-                      <a target={(target && target) || "_self"} href={url}>
+                      <a target={(target && target) || '_self'} href={url}>
                         {name}
                       </a>
                     </li>

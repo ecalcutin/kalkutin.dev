@@ -1,12 +1,12 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response } from 'express';
 
-import render from "./render";
+import render from './render';
 
 const app = express();
 
-app.use(express.static("./build", { index: false }));
+app.use(express.static('./build', { index: false }));
 
-app.get("/", async (_: Request, response: Response) => {
+app.get('/', async (_: Request, response: Response) => {
   try {
     const html = await render();
     response.status(200).send(html);
@@ -16,5 +16,5 @@ app.get("/", async (_: Request, response: Response) => {
 });
 
 app.listen(8080, () => {
-  console.log(`Server is listening on port ${8080}`);
+  process.stdout.write(`Server is listening on port ${8080}`);
 });

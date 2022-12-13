@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { StyledSideElement } from "./styles";
+import { StyledSideElement } from './styles';
 
 type SideProps = {
-  orientation: "left" | "right";
-  children: any;
+  orientation: 'left' | 'right';
+  children: React.ReactElement;
 };
 
 const Side = (props: SideProps) => {
