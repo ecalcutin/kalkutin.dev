@@ -1,15 +1,28 @@
 export default [
   {
+    company: "Fabit",
+    position: "Team Lead",
+    dateRange: "APR 2022 - Present",
+    url: "https://fabit.ru/",
+    description: "Working on various government & social projects",
+    achievements: [
+      "Team leading",
+      "Repository management",
+      "Performance optimization",
+      "Interviews",
+    ],
+  },
+  {
     company: "Grid Dynamics",
     position: "Team Lead",
-    dateRange: "MAR 2020 - Present",
+    dateRange: "MAR 2020 - FEB 2022",
     url: "https://www.griddynamics.com/",
     description: "Building email sources & delivering optimization",
     achievements: [
       "Team leading",
       "Improvement development flow",
       "Performance optimization",
-      "Automated Visual Regression Testing"
+      "Automated Visual Regression Testing",
     ],
   },
   {
