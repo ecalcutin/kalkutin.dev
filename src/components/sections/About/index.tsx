@@ -1,6 +1,6 @@
 import React from 'react';
 
-import profilePic from 'assets/images/profile.jpg';
+import profilePic from 'assets/images/profile.webp';
 
 import { StyledAboutSection, StyledPic, StyledText } from './styles';
 
@@ -47,7 +47,11 @@ const About = () => {
 
         <StyledPic>
           <div className='wrapper'>
-            <img className='img' src={profilePic} />
+            <img
+              className='img'
+              alt='Evgenii Kalkutin profile image'
+              src={profilePic}
+            />
           </div>
         </StyledPic>
       </div>

@@ -10,7 +10,7 @@ import { StyledHeader, StyledLinks, StyledNav } from './styles';
 const Logo = () => {
   return (
     <div className='logo' tabIndex={-1}>
-      <a href='/'>
+      <a aria-label='Main' href='/'>
         <IconLogo />
       </a>
     </div>
