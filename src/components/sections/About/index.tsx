@@ -51,6 +51,8 @@ const About = () => {
               className='img'
               alt='Evgenii Kalkutin profile image'
               src={profilePic}
+              width={300}
+              height={300}
             />
           </div>
         </StyledPic>
