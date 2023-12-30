@@ -2,17 +2,22 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag resume:$(date +%s)
+      - name: Deploy (Build image)
+        uses: appleboy/ssh-action@master
+        with:
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          host: kalkutin.dev
+          script: |
+            cd ~/resume && git pull || git clone https://github.com/ecalcutin/resume.git resume
+            cd ~/resume
+            docker build -t resume .
