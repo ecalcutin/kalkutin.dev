@@ -21,3 +21,5 @@ jobs:
             cd ~/resume && git pull || git clone https://github.com/ecalcutin/resume.git resume
             cd ~/resume
             docker build -t resume .
+            docker compose stop website
+            docker compose up -d website
