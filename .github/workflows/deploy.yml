@@ -18,5 +18,5 @@ jobs:
           script: |
             if [ ! -d "resume" ]; then git clone https://github.com/ecalcutin/resume.git resume; fi
             cd ~/resume
-            git pull
+            git pull --ff
             docker compose up --build --force-recreate --no-deps -d
