@@ -15,11 +15,11 @@ const navLinks = [
     name: 'Contact',
     url: '/#contact',
   },
-  {
-    name: 'Blog',
-    url: 'https://blog.kalkutin.dev',
-    target: '_blank',
-  },
+  // {
+  //   name: 'Blog',
+  //   url: 'https://blog.kalkutin.dev',
+  //   target: '_blank',
+  // },
 ];
 
 export default navLinks;
