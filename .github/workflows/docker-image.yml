@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy (Build image)
         uses: appleboy/ssh-action@master
@@ -17,9 +16,10 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           host: kalkutin.dev
+          script_stop: true
           script: |
-            cd ~/resume && git pull || git clone https://github.com/ecalcutin/resume.git resume
+            if [ ! -d "resume" ]; then git clone https://github.com/ecalcutin/resume.git resume; fi
             cd ~/resume
-            docker build -t resume .
-            docker compose stop website
-            docker compose up -d website
+            git fetch
+            git reset --hard origin/${{github.event.pull_request.head.ref }}
+            docker compose up --build --force-recreate --no-deps -d

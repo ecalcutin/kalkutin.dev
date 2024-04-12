@@ -8,8 +8,6 @@
     "build": "npm run build:client && npm run build:server",
     "start:dev": "cross-env NODE_ENV=development webpack serve --config webpack.client.ts",
     "start:prod": "cross-env NODE_ENV=production node build/server.js",
-    "docker:build": "docker build -t ecalcutin/kalkutin.dev-website:latest . && docker push ecalcutin/kalkutin.dev-website:latest",
-    "ncu": "npm-check-updates",
     "lint": "eslint {src/**/*.js,src/**/*.jsx,src/**/*.tsx,src/**/*.ts,}",
     "prettier": "prettier --check ./src/**/*.{ts,tsx}",
     "prettier:w": "npm run prettier -- --write",
