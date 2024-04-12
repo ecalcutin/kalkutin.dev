@@ -13,7 +13,7 @@ const render = async () => {
     const rendered = renderToString(
       <StyleSheetManager sheet={css.instance}>
         <App />
-      </StyleSheetManager>
+      </StyleSheetManager>,
     );
     const styleTags = css.getStyleTags();
     css.seal();
@@ -24,7 +24,7 @@ const render = async () => {
       resolve(
         html
           .replace(/<\/head>/, `${styleTags}</head>`)
-          .replace('<div id="root"></div>', `<div id="root">${rendered}</div>`)
+          .replace('<div id="root"></div>', `<div id="root">${rendered}</div>`),
       );
     });
   });
