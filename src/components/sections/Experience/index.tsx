@@ -53,7 +53,7 @@ const Experience = () => {
                   position,
                   url,
                 },
-                i
+                i,
               ) => {
                 return (
                   <CSSTransition
@@ -94,7 +94,7 @@ const Experience = () => {
                     </StyledTabPanel>
                   </CSSTransition>
                 );
-              }
+              },
             )}
         </StyledTabPanels>
       </div>
