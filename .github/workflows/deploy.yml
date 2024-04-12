@@ -1,13 +1,11 @@
-name: Docker Image CI
+name: Deploy Docker image
 
 on:
   push:
     branches: ['main']
-  pull_request:
-    branches: ['main']
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy (Build image)
@@ -21,5 +19,5 @@ jobs:
             if [ ! -d "resume" ]; then git clone https://github.com/ecalcutin/resume.git resume; fi
             cd ~/resume
             git fetch
-            git reset --hard origin/${{github.event.pull_request.head.ref }}
+            git reset --hard origin/${{github.ref_name }}
             docker compose up --build --force-recreate --no-deps -d
