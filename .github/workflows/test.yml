@@ -1,0 +1,14 @@
+name: Test
+
+on:
+  pull_request:
+    branches: ['main']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy (Build image)
+        uses: actions/checkout@v4
+      - run: |
+          npm run prettier
