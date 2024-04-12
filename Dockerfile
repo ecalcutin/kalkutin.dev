@@ -9,6 +9,6 @@ FROM node:20.5.1 as PROD
 WORKDIR /webapp
 COPY package.json ./
 COPY --from=BUILD /webapp/build ./build
-RUN npm pkg delete scripts.prepare && npm install --only=production
+RUN npm pkg delete scripts.prepare && npm install --omit=dev
 EXPOSE 8080
 CMD ["npm", "run", "start:prod"]
