@@ -15,7 +15,7 @@ const About = () => {
     'Vue',
     'Angular',
     'RxJS',
-    'Jest & Cypress',
+    'Jest & Playwright',
     'Webpack',
     'Docker',
   ];
