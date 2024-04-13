@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - name: Deploy (Build image)
+      - name: Pull and restart containers
         uses: appleboy/ssh-action@master
         with:
           username: ${{ secrets.SSH_USERNAME }}
@@ -36,5 +36,5 @@ jobs:
             git reset --hard origin/${{github.ref_name }}
             echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin 
             docker pull ${{ env.IMAGE_NAME }} 
-            docker compose up --force-recreate --build -d
+            docker compose up --force-recreate -d
             docker image prune -f
