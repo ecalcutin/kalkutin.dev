@@ -1,12 +1,41 @@
-name: Deploy Docker image
+name: Build and deploy
 
 on:
   push:
     branches: ['main']
+  pull_request:
+    branches: ['main']
+
+env:
+  IMAGE_NAME: ecalcutin/kalkutin.dev
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run prettier
+      - run: npm run lint
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t ${{ env.IMAGE_NAME }} .
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
+      - name: Push image
+        run: docker push ${{ env.IMAGE_NAME }}
   deploy:
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    needs: [test, build]
     steps:
       - name: Deploy (Build image)
         uses: appleboy/ssh-action@master
@@ -20,4 +49,7 @@ jobs:
             cd ~/resume
             git fetch
             git reset --hard origin/${{github.ref_name }}
-            docker compose up --build --force-recreate --no-deps -d
+            echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin 
+            docker compose pull ${{ env.IMAGE_NAME }} 
+            docker compose up --force-recreate --build -d
+            docker image prune -f
