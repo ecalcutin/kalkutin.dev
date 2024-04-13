@@ -14,7 +14,7 @@ services:
       - letsencrypt:/etc/letsencrypt
       - ./nginx:/etc/nginx/user_conf.d
   website:
-    image: resume
+    image: ecalcutin/kalkutin.dev
     build:
       context: .
       dockerfile: Dockerfile
