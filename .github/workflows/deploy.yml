@@ -30,8 +30,8 @@ jobs:
           host: kalkutin.dev
           script_stop: true
           script: |
-            if [ ! -d "resume" ]; then git clone https://github.com/ecalcutin/resume.git resume; fi
-            cd ~/resume
+            if [ ! -d "kalkutin.dev" ]; then git clone git@github.com:ecalcutin/kalkutin.dev.git kalkutin.dev; fi
+            cd ~/kalkutin.dev
             git fetch
             git reset --hard origin/${{github.ref_name }}
             echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin 

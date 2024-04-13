@@ -3,6 +3,9 @@ services:
   nginx:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
+    depends_on:
+      - website
+      - wireguard
     environment:
       - CERTBOT_EMAIL=evgheni.calcutin@gmail.com
       - RENEWAL_INTERVAL=1d
