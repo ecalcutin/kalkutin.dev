@@ -1,3 +1,5 @@
+import inspector from 'node:inspector';
+
 import express, { Request, Response } from 'express';
 
 import render from './render';
@@ -5,6 +7,16 @@ import render from './render';
 const app = express();
 
 app.use(express.static('./build', { index: false }));
+
+app.get('/debug-open', (req, res) => {
+  inspector.open(9090, '0.0.0.0');
+  res.status(200).end;
+});
+
+app.get('/debug-close', (req, res) => {
+  inspector.close();
+  res.status(200).end();
+});
 
 app.get('/', async (_: Request, response: Response) => {
   try {
