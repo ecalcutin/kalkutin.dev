@@ -6,7 +6,9 @@
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"]
+        "paths": [
+          "src"
+        ]
       }
     }
   },
@@ -30,12 +32,17 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
   "rules": {
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/ban-ts-comment": "warn",
     "no-console": "error",
     "import/default": "warn",
     "import/no-named-as-default": "off",
-    "@typescript-eslint/no-unused-vars": "error",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "import/order": [
@@ -45,7 +52,11 @@
           "builtin",
           "external",
           "internal",
-          ["parent", "sibling", "index"]
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
         ],
         "newlines-between": "always"
       }

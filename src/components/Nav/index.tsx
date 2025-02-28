@@ -1,13 +1,14 @@
 import React, { useLayoutEffect, useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { TransitionGroup } from 'react-transition-group';
 
 import { LOADER_DELAY } from 'config/utils';
+import { CSSTransitionWithRef } from 'theme/css-transition-with-ref';
 
 import IconLogo from './logo';
 import navLinks from './links';
 import { StyledHeader, StyledLinks, StyledNav } from './styles';
 
-const Logo = () => {
+const Logo: React.FC = () => {
   return (
     <div className='logo' tabIndex={-1}>
       <a aria-label='Main' href='/'>
@@ -19,6 +20,7 @@ const Logo = () => {
 
 const Nav = () => {
   const [isMounted, setIsMounted] = useState(false);
+
   useLayoutEffect(() => {
     setIsMounted(true);
   });
@@ -27,9 +29,9 @@ const Nav = () => {
       <StyledNav>
         <TransitionGroup component={null}>
           {isMounted && (
-            <CSSTransition classNames={'fade'} timeout={LOADER_DELAY}>
+            <CSSTransitionWithRef classNames={'fade'} timeout={LOADER_DELAY}>
               <Logo />
-            </CSSTransition>
+            </CSSTransitionWithRef>
           )}
         </TransitionGroup>
 
@@ -38,7 +40,7 @@ const Nav = () => {
             <TransitionGroup component={null}>
               {isMounted &&
                 navLinks.map(({ name, url, target }, index) => (
-                  <CSSTransition
+                  <CSSTransitionWithRef
                     key={index}
                     timeout={LOADER_DELAY}
                     classNames='fadedown'
@@ -51,7 +53,7 @@ const Nav = () => {
                         {name}
                       </a>
                     </li>
-                  </CSSTransition>
+                  </CSSTransitionWithRef>
                 ))}
             </TransitionGroup>
           </ol>

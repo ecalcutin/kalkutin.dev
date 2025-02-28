@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
 
+import { CSSTransitionWithRef } from 'theme/css-transition-with-ref';
 import experience from 'config/social/experience';
 
 import {
@@ -12,7 +12,7 @@ import {
   StyledTabPanels,
 } from './styles';
 
-const Experience = () => {
+const Experience: React.FC = () => {
   const [activeTabId, setActiveTabId] = useState(0);
 
   return (
@@ -26,7 +26,7 @@ const Experience = () => {
               return (
                 <StyledTabButton
                   key={i}
-                  isActive={activeTabId === i}
+                  $isActive={activeTabId === i}
                   onClick={() => setActiveTabId(i)}
                   id={`tab-${i}`}
                   role='tab'
@@ -38,7 +38,7 @@ const Experience = () => {
                 </StyledTabButton>
               );
             })}
-          <StyledHighlight activeTabId={activeTabId} />
+          <StyledHighlight $activeTabId={activeTabId} />
         </StyledTabList>
 
         <StyledTabPanels>
@@ -56,7 +56,7 @@ const Experience = () => {
                 i,
               ) => {
                 return (
-                  <CSSTransition
+                  <CSSTransitionWithRef
                     key={i}
                     in={activeTabId === i}
                     timeout={250}
@@ -92,7 +92,7 @@ const Experience = () => {
                         </ul>
                       </div>
                     </StyledTabPanel>
-                  </CSSTransition>
+                  </CSSTransitionWithRef>
                 );
               },
             )}

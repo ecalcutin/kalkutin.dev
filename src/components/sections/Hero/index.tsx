@@ -1,12 +1,13 @@
 import React, { Fragment, useLayoutEffect, useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { TransitionGroup } from 'react-transition-group';
 
 import { LOADER_DELAY } from 'config/utils';
 import email from 'config/social/email';
+import { CSSTransitionWithRef } from 'theme/css-transition-with-ref';
 
 import { StyledHeroSection } from './styles';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const [isMounted, setIsMounted] = useState(null);
 
   useLayoutEffect(() => {
@@ -54,9 +55,13 @@ const Hero = () => {
         <TransitionGroup component={null}>
           {isMounted &&
             items.map((item, i) => (
-              <CSSTransition key={i} classNames='fadeup' timeout={LOADER_DELAY}>
+              <CSSTransitionWithRef
+                key={i}
+                classNames='fadeup'
+                timeout={LOADER_DELAY}
+              >
                 <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-              </CSSTransition>
+              </CSSTransitionWithRef>
             ))}
         </TransitionGroup>
       </StyledHeroSection>

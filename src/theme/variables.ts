@@ -15,8 +15,9 @@ const variables = css`
     --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
 
-    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text',
-      -apple-system, system-ui, sans-serif;
+    --font-sans:
+      'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+      system-ui, sans-serif;
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
     --fz-xxs: 12px;
@@ -42,9 +43,11 @@ const variables = css`
 
     --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
     --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
-    --ham-after: bottom 0.1s ease-in 0.25s,
+    --ham-after:
+      bottom 0.1s ease-in 0.25s,
       transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    --ham-after-active: bottom 0.1s ease-out,
+    --ham-after-active:
+      bottom 0.1s ease-out,
       transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
   }
 `;
