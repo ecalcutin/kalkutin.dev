@@ -1,2 +1,2 @@
 WG_HOST=vpn.kalkutin.dev
-PASSWORD=
+PASSWORD_HASH='$2a$12$pxg9YSADv5FxUPnyGObr.ut.OS6K.oJ6FD3XN8UQPm2jDHtU4fONy'=
