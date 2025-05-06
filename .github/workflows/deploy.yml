@@ -6,6 +6,7 @@ on:
 
 env:
   IMAGE_NAME: ecalcutin/kalkutin.dev
+  K8S_NAMESPACE: resume
 
 jobs:
   build:
@@ -18,23 +19,22 @@ jobs:
         run: echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
       - name: Push image
         run: docker push ${{ env.IMAGE_NAME }}
-  deploy:
+  deploy-to-cluster:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - name: Pull and restart containers
-        uses: appleboy/ssh-action@master
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v3
+      - name: Configure Kubeconfig
+        uses: azure/k8s-set-context@v3
         with:
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          host: kalkutin.dev
-          script_stop: true
-          script: |
-            if [ ! -d "kalkutin.dev" ]; then git clone git@github.com:ecalcutin/kalkutin.dev.git kalkutin.dev; fi
-            cd ~/kalkutin.dev
-            git fetch
-            git reset --hard origin/${{github.ref_name }}
-            echo ${{ secrets.DOCKER_HUB_PASSWORD }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin 
-            docker pull ${{ env.IMAGE_NAME }} 
-            docker compose up --force-recreate -d
-            docker image prune -f
+          method: kubeconfig
+          kubeconfig: ${{ secrets.KUBE_CONFIG }}
+      - name: Deploy to cluster (dev)
+        run: |
+          cd k8s/overlays/dev
+          kustomize edit set image IMAGE_NAME:$GITHUB_SHA
+          kustomize build . | kubectl apply -f -
+          kubectl rollout status deployment/resume -n $K8S_NAMESPACE
