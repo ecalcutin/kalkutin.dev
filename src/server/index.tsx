@@ -19,6 +19,6 @@ app.get('*', (_: Request, response: Response) => {
   response.redirect('/');
 });
 
-app.listen(8080, () => {
-  process.stdout.write(`Server is listening on port ${8080}`);
+app.listen(3000, () => {
+  process.stdout.write(`Server is listening on port ${3000}`);
 });
