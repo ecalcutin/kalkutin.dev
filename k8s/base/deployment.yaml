@@ -17,9 +17,6 @@ spec:
           image: ecalcutin/kalkutin.dev
           ports:
             - containerPort: 3000
-          envFrom:
-            - configMapRef:
-                name: resume-config
           resources:
             requests:
               cpu: '100m'
