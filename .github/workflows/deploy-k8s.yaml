@@ -29,11 +29,6 @@ jobs:
           method: service-account
           k8s-url: https://cluster.kalkutin.dev:6443
           k8s-secret: ${{ secrets.KUBE_TOKEN }}
-      - name: Debug inputs
-        run: |
-          echo "Image name: ${{ env.IMAGE_NAME }}"
-          echo "Image tag: ${{ inputs.image_tag }}"
-          echo "Full image: ${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}"
       - name: Deploy to cluster (dev)
         run: |
           kubectl set image deployment/resume resume=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }} -n applications

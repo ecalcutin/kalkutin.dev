@@ -9,4 +9,3 @@ resources:
 
 patches:
   - path: patch-replicas.yaml
-  - path: patch-image.yaml
