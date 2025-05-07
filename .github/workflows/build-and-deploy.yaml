@@ -3,9 +3,6 @@ name: Build and deploy application
 on:
   push:
     branches: ['main']
-    paths:
-      - '**'
-      - '!k8s/**'
 
 env:
   IMAGE_NAME: ecalcutin/kalkutin.dev

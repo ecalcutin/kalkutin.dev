@@ -31,6 +31,5 @@ jobs:
           k8s-secret: ${{ secrets.KUBE_TOKEN }}
       - name: Deploy to cluster
         run: |
-          kubectl apply -k k8s/overlays/dev -n applications
           kubectl set image deployment/resume resume=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }} -n applications
           kubectl rollout status deployment/resume -n applications
