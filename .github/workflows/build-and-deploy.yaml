@@ -47,7 +47,7 @@ jobs:
 
   deploy:
     needs: [build]
-    uses: ./deploy-k8s.yaml
+    uses: ./.github/workflows/deploy-k8s.yaml
     with:
       image_tag: ${{ needs.increment-version.outputs.version }}
     secrets:
