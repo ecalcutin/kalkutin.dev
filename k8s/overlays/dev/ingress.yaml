@@ -11,10 +11,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - resume.kalkutin.dev
+        - kalkutin.dev
       secretName: resume-tls-secret
   rules:
-    - host: resume.kalkutin.dev
+    - host: kalkutin.dev
       http:
         paths:
           - path: /
