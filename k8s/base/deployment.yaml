@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: resume
-          image: ecalcutin/kalkutin.dev
+          image: ecalcutin/kalkutin.dev:latest
           ports:
             - containerPort: 3000
           resources:

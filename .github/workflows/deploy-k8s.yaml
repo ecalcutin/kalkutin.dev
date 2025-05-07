@@ -31,8 +31,6 @@ jobs:
           k8s-secret: ${{ secrets.KUBE_TOKEN }}
       - name: Deploy to cluster (dev)
         run: |
-          cd k8s/overlays/dev
-          kustomize edit set image ${{ env.IMAGE_NAME }}=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
-          kustomize build . | kubectl apply -f - -n applications
+          kubectl set image deployment/resume resume=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }} -n applications
           kubectl rollout restart deployment/resume -n applications
           kubectl rollout status deployment/resume -n applications
