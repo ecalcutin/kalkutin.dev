@@ -1,0 +1,37 @@
+name: Deploy common workflow
+
+on:
+  workflow_call:
+    inputs:
+      image_tag:
+        required: true
+        type: string
+    secrets:
+      KUBE_TOKEN:
+        required: true
+
+env:
+  IMAGE_NAME: ecalcutin/kalkutin.dev
+
+jobs:
+  deploy-to-cluster:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v4
+        with:
+          version: v1.32.4
+      - name: Configure Kubeconfig
+        uses: azure/k8s-set-context@v4
+        with:
+          method: service-account
+          k8s-url: https://cluster.kalkutin.dev:6443
+          k8s-secret: ${{ secrets.KUBE_TOKEN }}
+      - name: Deploy to cluster (dev)
+        run: |
+          cd k8s/overlays/dev
+          kustomize edit set image ${{ env.IMAGE_NAME }}=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
+          kubectl apply -k . -n applications
+          kubectl rollout status deployment/resume -n applications
