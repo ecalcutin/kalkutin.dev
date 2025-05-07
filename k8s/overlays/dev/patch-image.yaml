@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: resume
-          image: ecalcutin/kalkutin.dev:latest
+          image: ecalcutin/kalkutin.dev
