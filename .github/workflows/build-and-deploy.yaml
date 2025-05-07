@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [increment-version]
     outputs:
-      image_tag: v${{ needs.increment-version.outputs.version }}
+      image_tag: ${{ needs.increment-version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
