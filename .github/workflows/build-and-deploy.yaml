@@ -55,6 +55,6 @@ jobs:
     needs: [build]
     uses: ./.github/workflows/deploy-k8s.yaml
     with:
-      image_tag: ${{ needs.increment-version.outputs.version }}
+      image_tag: 'v1.0.13'
     secrets:
       KUBE_TOKEN: ${{ secrets.KUBE_TOKEN }}
