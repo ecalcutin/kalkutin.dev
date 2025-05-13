@@ -11,6 +11,7 @@
     "lint": "eslint {src/**/*.js,src/**/*.jsx,src/**/*.tsx,src/**/*.ts,}",
     "prettier": "prettier --check ./src/**/*.{ts,tsx}",
     "prettier:w": "npm run prettier -- --write",
+    "test:e2e": "npx playwright test",
     "prepare": "husky"
   },
   "repository": {
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/ecalcutin/resume#readme",
   "devDependencies": {
+    "@playwright/test": "^1.52.0",
     "@types/express": "^5.0.1",
     "@types/node": "^22.15.12",
     "@types/react": "^19.1.3",
