@@ -5,7 +5,7 @@ import socialMedia from 'config/social/social-media';
 
 import { StyledSocialList } from './styles';
 
-const Social = () => (
+export const Social: React.FC = () => (
   <Side orientation='left'>
     <StyledSocialList>
       {socialMedia &&
@@ -19,5 +19,3 @@ const Social = () => (
     </StyledSocialList>
   </Side>
 );
-
-export default Social;

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import Social from 'components/Social';
-import Email from 'components/Email';
+import { Social } from 'components/Social';
+import { Email } from 'components/Email';
 import Nav from 'components/Nav';
 import Footer from 'components/Footer';
 

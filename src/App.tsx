@@ -2,7 +2,7 @@ import React, { Fragment, useLayoutEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, theme } from 'theme';
-import HomePage from 'pages/HomePage';
+import { HomePage } from 'pages/HomePage';
 import Layout from 'components/Layout';
 
 import packageJson from '../package.json';
