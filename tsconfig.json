@@ -1,6 +1,23 @@
 {
   "compilerOptions": {
+    // Type Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Interop Constraints
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "esModuleInterop": true,
+
+    // Modules
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+
+    // Language and Environment
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
     "jsx": "react-jsx"
   }
 }
