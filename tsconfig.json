@@ -12,8 +12,8 @@
     "esModuleInterop": true,
 
     // Modules
-    "module": "Preserve",
-    "moduleResolution": "bundler",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
 
     // Language and Environment
     "target": "ESNext",
