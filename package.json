@@ -3,6 +3,7 @@
   "version": "1.0.27",
   "description": "",
   "scripts": {
+    "lint": "eslint --ext .ts ./src",
     "prepare": "husky"
   },
   "repository": {
@@ -19,12 +20,22 @@
   "homepage": "https://github.com/ecalcutin/kalkutin.dev#readme",
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
       "prettier --write"
     ]
   },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
   "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "eslint": "^9.26.0",
+    "eslint-plugin-import": "^2.31.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.32.1"
   }
 }
