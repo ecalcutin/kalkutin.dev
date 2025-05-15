@@ -1,0 +1,30 @@
+{
+  "name": "kalkutin.dev",
+  "version": "1.0.27",
+  "description": "",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecalcutin/kalkutin.dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ecalcutin/kalkutin.dev/issues"
+  },
+  "homepage": "https://github.com/ecalcutin/kalkutin.dev#readme",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3"
+  }
+}
