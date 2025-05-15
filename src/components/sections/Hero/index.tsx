@@ -7,7 +7,7 @@ import { CSSTransitionWithRef } from 'theme/css-transition-with-ref';
 
 import { StyledHeroSection } from './styles';
 
-const Hero: React.FC = () => {
+export const Hero: React.FC = () => {
   const [isMounted, setIsMounted] = useState(null);
 
   useLayoutEffect(() => {
@@ -68,5 +68,3 @@ const Hero: React.FC = () => {
     </Fragment>
   );
 };
-
-export default Hero;

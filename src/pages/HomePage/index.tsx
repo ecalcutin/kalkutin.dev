@@ -1,17 +1,14 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
 
-import Hero from 'components/sections/Hero';
+import { Hero } from 'components/sections/Hero';
 import About from 'components/sections/About';
 import Experience from 'components/sections/Experience';
 import Contact from 'components/sections/Contact';
 import Certifications from 'components/sections/Certifications';
 
-const StyledMainContainer = styled.main`
-  counter-reset: section;
-`;
+import { StyledMainContainer } from './styles';
 
-const HomePage = () => {
+export const HomePage: React.FC = () => {
   return (
     <Fragment>
       <StyledMainContainer className='fillHeight'>
@@ -24,5 +21,3 @@ const HomePage = () => {
     </Fragment>
   );
 };
-
-export default HomePage;
