@@ -1,4 +1,4 @@
-import React, { Fragment, PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { Header } from 'client/components/Header';
 
@@ -8,9 +8,9 @@ export const DefaultLayout: React.FC<Props> = props => {
   const { children } = props;
 
   return (
-    <Fragment>
+    <div>
       <Header />
       {children}
-    </Fragment>
+    </div>
   );
 };

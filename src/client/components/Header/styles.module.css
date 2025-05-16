@@ -1,0 +1,11 @@
+.container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
