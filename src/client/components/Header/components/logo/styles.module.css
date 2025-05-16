@@ -1,0 +1,6 @@
+.container {
+  > a {
+    color: var(--secondary);
+    width: 48px;
+  }
+}
