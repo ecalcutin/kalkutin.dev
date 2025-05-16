@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "node scripts/dev",
     "prepare": "husky",
     "lint": "eslint --ext .js,.ts,.tsx src/"
   },
@@ -18,10 +19,13 @@
   },
   "homepage": "https://github.com/ecalcutin/resume#readme",
   "dependencies": {
+    "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.18",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "esbuild": "^0.25.4",

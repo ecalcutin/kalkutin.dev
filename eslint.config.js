@@ -5,7 +5,7 @@ import ts from 'typescript-eslint';
 
 export default defineConfig([
   // Global ignores
-  { ignores: [] },
+  { ignores: ['scripts/*'] },
 
   // Base configurations
   js.configs.recommended,
