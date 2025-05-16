@@ -1,5 +1,7 @@
 import React from 'react';
 
+import 'client/styles/index.css';
+
 import { DefaultLayout } from './layout/default';
 
 export const App: React.FC = () => {
