@@ -9,3 +9,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.logo {
+  > a {
+    color: var(--secondary);
+    width: 48px;
+  }
+}
+
+.links {
+  display: flex;
+}

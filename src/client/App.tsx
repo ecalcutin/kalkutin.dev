@@ -5,11 +5,7 @@ import 'client/styles/index.css';
 import { DefaultLayout } from './layout/default';
 
 export const App: React.FC = () => {
-  return (
-    <DefaultLayout>
-      <h1>App</h1>
-    </DefaultLayout>
-  );
+  return <DefaultLayout></DefaultLayout>;
 };
 
 // Export for server-side rendering
