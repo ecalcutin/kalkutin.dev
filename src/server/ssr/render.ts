@@ -3,7 +3,7 @@ import path from 'node:path';
 
 import { renderToString } from 'react-dom/server';
 
-import App from '../../client/App';
+import App from 'client/App';
 
 const render = () => {
   const htmlPath = path.resolve(process.cwd(), 'src', 'public', 'index.html');

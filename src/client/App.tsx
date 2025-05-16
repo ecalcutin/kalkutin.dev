@@ -10,5 +10,5 @@ export const App: React.FC = () => {
   );
 };
 
-// Export for using in .ts extensions
+// Export for server-side rendering
 export default React.createElement(App);

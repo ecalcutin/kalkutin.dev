@@ -22,7 +22,12 @@
     "target": "ESNext",
     "lib": ["ESNext", "DOM"],
 
-    "jsx": "react-jsx",
-    "baseUrl": "./src"
+    // Paths
+
+    "rootDir": "src/",
+    "baseUrl": "src/",
+
+    // Misc
+    "jsx": "react-jsx"
   }
 }
