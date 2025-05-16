@@ -1,11 +1,11 @@
-import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
-import ts from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import';
+import ts from 'typescript-eslint';
 
 export default defineConfig([
   // Global ignores
-  { ignores: ['dist/**', 'node_modules/**', 'eslint.config.mjs'] },
+  { ignores: [] },
 
   // Base configurations
   js.configs.recommended,
@@ -13,7 +13,6 @@ export default defineConfig([
 
   // TypeScript configuration - restrict to src folder only
   {
-    files: ['src/**/*.ts'],
     languageOptions: {
       parserOptions: {
         project: './tsconfig.json',
@@ -24,15 +23,11 @@ export default defineConfig([
 
   // Import plugin configuration
   {
-    files: ['src/**/*.ts'],
     ...importPlugin.flatConfigs.recommended,
     settings: {
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-        },
-        node: {
-          extensions: ['.js', '.ts', '.mjs'],
         },
       },
     },
@@ -40,14 +35,7 @@ export default defineConfig([
 
   // Rule overrides
   {
-    files: ['src/**/*.ts'],
     rules: {
-      'import/no-unresolved': [
-        'error',
-        {
-          ignore: ['^eslint/', '^@eslint/', 'typescript-eslint'],
-        },
-      ],
       'import/order': [
         'error',
         {

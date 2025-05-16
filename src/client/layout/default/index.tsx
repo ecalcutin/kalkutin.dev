@@ -1,5 +1,6 @@
 import React, { Fragment, PropsWithChildren } from 'react';
-import { Header } from 'web/components/Header';
+
+import { Header } from 'client/components/Header';
 
 type Props = {} & PropsWithChildren;
 

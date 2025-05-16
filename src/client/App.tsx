@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+
 import { DefaultLayout } from './layout/default';
 
 export const App: React.FC = () => {
