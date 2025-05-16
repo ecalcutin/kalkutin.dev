@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint --ext .ts ./src --fix"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,20 @@
     "url": "https://github.com/ecalcutin/resume/issues"
   },
   "homepage": "https://github.com/ecalcutin/resume#readme",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
   "devDependencies": {
-    "husky": "^9.1.7"
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "esbuild": "^0.25.4",
+    "eslint": "^9.26.0",
+    "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
