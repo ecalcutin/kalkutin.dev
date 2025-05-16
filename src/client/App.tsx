@@ -9,3 +9,6 @@ export const App: React.FC = () => {
     </DefaultLayout>
   );
 };
+
+// Export for using in .ts extensions
+export default React.createElement(App);
