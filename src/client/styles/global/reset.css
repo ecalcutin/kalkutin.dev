@@ -1,4 +1,9 @@
 a {
   display: inline-block;
   text-decoration: none;
+  color: inherit;
+}
+
+ol {
+  list-style: none;
 }

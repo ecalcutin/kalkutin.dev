@@ -4,12 +4,20 @@ import styles from './styles.module.css';
 
 export const Navigation: React.FC = () => {
   return (
-    <div>
-      <ol className={styles.container}>
-        <li>About</li>
-        <li>Certifications</li>
-        <li>Experience</li>
-        <li>Contact</li>
+    <div className={styles.container}>
+      <ol>
+        <li>
+          <a href='/#about'>About</a>
+        </li>
+        <li>
+          <a href='/#certifications'>Certifications</a>
+        </li>
+        <li>
+          <a href='/#experience'>Experience</a>
+        </li>
+        <li>
+          <a href='/#contact'>Contact</a>
+        </li>
       </ol>
     </div>
   );
