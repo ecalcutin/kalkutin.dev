@@ -13,7 +13,7 @@
         padding: 10px;
 
         &::before {
-          color: var(--secondary);
+          color: var(--green);
           content: '0' counter(item) '.';
           margin-right: 5px;
         }
