@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 
 import { Header } from 'client/components/widgets/Header';
-import { SocialSideRail } from 'client/components/widgets/SocialSideRail';
+import { SideRailSocial } from 'client/components/widgets/SideRailSocials';
 
 import styles from './styles.module.css';
 
@@ -13,7 +13,7 @@ export const DefaultLayout: React.FC<Props> = props => {
   return (
     <div>
       <Header />
-      <SocialSideRail />
+      <SideRailSocial />
       <div className={styles.content}>{children}</div>
     </div>
   );

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 
 import styles from './styles.module.css';
@@ -9,5 +10,7 @@ type Props = {
 export const SideRail: React.FC<Props> = props => {
   const { children } = props;
 
-  return <div className={styles.container}>{children}</div>;
+  return (
+    <div className={clsx(styles.container, styles[props.side])}>{children}</div>
+  );
 };
