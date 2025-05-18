@@ -1,32 +1,42 @@
 import React from 'react';
 
-export const WebsiteLogo: React.FC = () => (
-  <svg
-    role='img'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 0 692.46 799.59'
-  >
-    <title>Kalkutin Evgenii</title>
-    <polygon
-      stroke='currentColor'
-      strokeWidth='40'
-      points='15 208.56 15 591.03 346.23 782.27 677.46 591.03 677.46 208.56 346.23 17.32 15 208.56'
-    />
-    <rect
-      fill='currentColor'
-      x='261.86'
-      y='269.4'
-      width='34.36'
-      height='260.79'
-    />
-    <polygon
-      fill='currentColor'
-      points='277.02 466.73 272.51 424.42 411.73 269.59 453.23 269.59 277.02 466.73'
-    />
-    <polygon
-      fill='currentColor'
-      points='420.52 530.19 461.33 530.19 341.02 371.78 316.03 393.5 420.52 530.19'
-    />
-  </svg>
-);
+type Props = {
+  readonly size: number;
+};
+
+export const WebsiteLogo: React.FC<Props> = props => {
+  const { size } = props;
+
+  return (
+    <svg
+      width={size}
+      height={size}
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 350 428'
+    >
+      <title>Kalkutin Evgenii</title>
+      <polygon
+        stroke='currentcolor'
+        strokeWidth={20}
+        points='20 118.997 20 309 174.999 404 330 309 330 118.997 174.999 24 20 118.997'
+        style={{
+          fillOpacity: 0.1,
+          fillRule: 'nonzero',
+        }}
+      />
+      <text
+        x='175'
+        y='230'
+        style={{
+          fill: 'currentColor',
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '180',
+          textAnchor: 'middle',
+          dominantBaseline: 'middle',
+        }}
+      >
+        K
+      </text>
+    </svg>
+  );
+};

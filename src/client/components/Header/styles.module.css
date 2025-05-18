@@ -1,4 +1,5 @@
 .container {
+  padding: var(--spacing-sm) var(--spacing-xl);
   position: fixed;
   width: 100%;
   top: 0;

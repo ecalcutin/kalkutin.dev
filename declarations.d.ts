@@ -1,4 +1,4 @@
-declare module '.*styles.module.css' {
+declare module '*.module.css' {
   const classes: Record<string, string> & {
     /**
      * The outermost bounding box of a component or section
@@ -22,7 +22,7 @@ declare module '.*styles.module.css' {
   export default classes;
 }
 
-declare module '.*styles.css' {
+declare module '*.css' {
   const content: string;
   export default content;
 }

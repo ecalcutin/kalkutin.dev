@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 export const Navigation: React.FC = () => {
   return (
     <div className={styles.container}>
-      <ol>
+      <ol className={styles.wrapper}>
         <li>
           <a href='/#about'>About</a>
         </li>

@@ -7,7 +7,7 @@ export const Logo: React.FC = () => {
   return (
     <div className={styles.container}>
       <a href='/' aria-label='home'>
-        <WebsiteLogo />
+        <WebsiteLogo size={45} />
       </a>
     </div>
   );

@@ -1,6 +1,13 @@
 .container {
   > a {
     color: var(--color-secondary);
-    width: 42px;
+    line-height: 0;
+
+    > svg {
+      fill: none;
+      &:hover {
+        fill: var(--color-secondary);
+      }
+    }
   }
 }
