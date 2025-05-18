@@ -1,6 +1,6 @@
 .container {
   > a {
     color: var(--green);
-    width: 48px;
+    width: 42px;
   }
 }

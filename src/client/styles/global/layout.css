@@ -2,4 +2,5 @@ html,
 body {
   margin: 0px;
   background-color: var(--navy);
+  font-family: var(--font-sans);
 }

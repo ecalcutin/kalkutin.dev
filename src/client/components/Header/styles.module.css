@@ -6,8 +6,10 @@
 }
 
 .content {
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  color: var(--lightest-slate);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--lightest-slate);
 }
