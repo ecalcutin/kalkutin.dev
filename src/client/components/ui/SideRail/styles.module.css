@@ -1,6 +1,32 @@
 .container {
   position: fixed;
   bottom: 0;
+
+  > ul {
+    width: 2.5rem;
+
+    li {
+      font-family: var(--font-mono);
+
+      &:last-of-type {
+        margin-bottom: 1.25rem;
+      }
+
+      a {
+        &:hover {
+          transform: translateY(-0.25rem);
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 8rem;
+      background-color: var(--color-text);
+    }
+  }
 }
 
 .left {
