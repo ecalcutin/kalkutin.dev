@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'client/styles/index.css';
 
-import { Block } from './components/Block';
+import { Block } from './components/ui/Block';
 import { DefaultLayout } from './layout/default';
 
 export const App: React.FC = () => {
