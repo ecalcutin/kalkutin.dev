@@ -1,6 +1,6 @@
 html,
 body {
   margin: 0px;
-  background-color: var(--navy);
+  background-color: var(--color-primary);
   font-family: var(--font-sans);
 }

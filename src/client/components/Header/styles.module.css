@@ -8,7 +8,7 @@
 .content {
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
-  color: var(--lightest-slate);
+  color: var(--color-text-lightest);
   display: flex;
   justify-content: space-between;
   align-items: center;
