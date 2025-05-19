@@ -2,5 +2,6 @@ html,
 body {
   margin: 0px;
   background-color: var(--color-primary);
+  color: var(--color-text);
   font-family: var(--font-sans);
 }

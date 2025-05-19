@@ -4,9 +4,8 @@
 
   --color-primary-dark: hsl(from var(--color-primary) h s calc(l - 10));
 
-  --color-text: hsl(from var(--color-primary) h 25% 70%);
-  --color-text-light: hsl(from var(--color-text) h s calc(l + 10));
-  --color-text-lightest: hsl(from var(--color-text) h s calc(l + 20));
+  --color-text: #8892b0;
+  --color-text-light: hsl(from var(--color-text) h calc(s + 40) calc(l + 25));
 
   /* 
     ----------------
