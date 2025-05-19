@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { type PropsWithChildren, StrictMode } from 'react';
 
 import 'client/styles/index.css';
 
-import { DefaultLayout } from './layout/default';
+type Props = {} & PropsWithChildren;
 
-export const App: React.FC = () => {
-  return <DefaultLayout></DefaultLayout>;
+export const App: React.FC<Props> = props => {
+  return <StrictMode>{props.children}</StrictMode>;
 };
-
-// Export for server-side rendering
-export default React.createElement(App);

@@ -1,4 +1,5 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
+import { Outlet } from 'react-router';
 
 import { Header } from 'client/components/widgets/Header';
 import { SideRailEmail } from 'client/components/widgets/SideRailEmail';
@@ -6,17 +7,15 @@ import { SideRailSocial } from 'client/components/widgets/SideRailSocials';
 
 import styles from './styles.module.css';
 
-type Props = {} & PropsWithChildren;
-
-export const DefaultLayout: React.FC<Props> = props => {
-  const { children } = props;
-
+export const DefaultLayout: React.FC = () => {
   return (
     <div>
       <Header />
       <SideRailSocial />
       <SideRailEmail />
-      <div className={styles.content}>{children}</div>
+      <div className={styles.content}>
+        <Outlet />
+      </div>
     </div>
   );
 };

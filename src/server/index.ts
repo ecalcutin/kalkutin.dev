@@ -2,6 +2,7 @@ import path from 'node:path';
 
 import express, { type Request, type Response } from 'express';
 
+import normalizeRequest from './ssr/normalizeRequest';
 import render from './ssr/render';
 
 const app = express();
@@ -9,8 +10,11 @@ const app = express();
 const STATIC_DIR = path.join(process.cwd(), 'build', 'static');
 
 app.use('/static', express.static(STATIC_DIR));
-app.use((request: Request, response: Response) => {
-  const html = render();
+app.use(async (expressRequest: Request, response: Response) => {
+  const request = normalizeRequest(expressRequest);
+
+  const html = await render(request);
+
   response.status(200).send(html);
 });
 
