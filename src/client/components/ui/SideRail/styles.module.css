@@ -13,6 +13,7 @@
       }
 
       a {
+        transition: var(--transition);
         &:hover {
           transform: translateY(-0.25rem);
         }
