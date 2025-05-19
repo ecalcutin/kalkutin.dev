@@ -22,3 +22,7 @@
     font-size: clamp(2.5rem, 8vw, 5rem);
   }
 }
+
+.cta {
+  margin-top: 2.5rem;
+}

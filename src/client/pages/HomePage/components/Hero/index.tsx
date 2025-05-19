@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button } from 'client/components/ui/Button';
+
 import styles from './styles.module.css';
 
 export const Hero: React.FC = () => {
@@ -30,6 +32,9 @@ export const Hero: React.FC = () => {
         Javascript engineer specializing in building exceptional digital
         experiences.
       </p>
+      <div className={styles.cta}>
+        <Button>Hire me now!</Button>
+      </div>
     </section>
   );
 };
