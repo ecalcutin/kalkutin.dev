@@ -14,7 +14,7 @@
   --font-sans: 'Calibre', sans-serif;
   --font-mono: 'SF Mono', monospace;
 
-  --font-size-xs: 13px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
+  --font-size: 20px;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1.25rem;
 }

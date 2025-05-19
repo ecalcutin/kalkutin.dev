@@ -9,6 +9,7 @@
   > li {
     margin: 0px 5px;
     counter-increment: item 1;
+    font-size: var(--font-size-sm);
 
     transition: var(--transition);
 
