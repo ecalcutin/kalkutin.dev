@@ -8,6 +8,10 @@
     li {
       font-family: var(--font-mono);
 
+      &:hover {
+        color: var(--color-secondary);
+      }
+
       &:last-of-type {
         margin-bottom: 1.25rem;
       }

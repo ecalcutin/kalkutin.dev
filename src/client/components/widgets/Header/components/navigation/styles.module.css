@@ -10,6 +10,12 @@
     margin: 0px 5px;
     counter-increment: item 1;
 
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+
     &:last-child > a {
       padding-right: 0;
     }
