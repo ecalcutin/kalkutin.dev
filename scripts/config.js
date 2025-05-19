@@ -6,6 +6,9 @@ export const BUILD_PATH = path.join(WORKSPACE_DIR, 'build');
 const sharedConfig = {
   bundle: true,
   format: 'esm',
+  loader: {
+    '.woff2': 'file',
+  },
 };
 
 export const serverConfig = {
@@ -15,6 +18,7 @@ export const serverConfig = {
   entryPoints: {
     server: path.join(WORKSPACE_DIR, 'src', 'server', 'index.ts'),
   },
+  external: ['*.woff2'],
   outdir: path.join(BUILD_PATH),
 };
 

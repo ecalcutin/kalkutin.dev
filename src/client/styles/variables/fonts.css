@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'Calibre';
+  src: url('../../../public/fonts/Calibre/Calibre-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../../../public/fonts/SFMono/SFMono-Regular.woff2') format('woff2');
+  font-display: swap;
+}
 
 :root {
-  --font-sans: 'Roboto', sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
+  --font-sans: 'Calibre', sans-serif;
+  --font-mono: 'SF Mono', monospace;
 
   /* --fz-xxs: 12px; */
   --fz-xs: 13px;
