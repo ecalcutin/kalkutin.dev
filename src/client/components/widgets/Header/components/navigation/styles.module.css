@@ -1,17 +1,12 @@
-.container {
-  display: flex;
-  align-items: center;
-}
-
-.wrapper {
+ol.container {
   display: flex;
   align-items: center;
 
-  .resumeButton {
+  .resume {
     padding: 0.75rem 1rem;
   }
 
-  > li {
+  li {
     margin: 0px 5px;
     counter-increment: item 1;
     font-size: var(--font-size-sm);
@@ -26,7 +21,7 @@
       padding-right: 0;
     }
 
-    > a {
+    a {
       padding: 10px;
 
       &::before {

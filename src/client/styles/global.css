@@ -1,8 +1,22 @@
-html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0px;
   background-color: var(--color-primary);
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--font-size);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
 }

@@ -21,6 +21,14 @@
     color: var(--color-text);
     font-size: clamp(2.5rem, 8vw, 5rem);
   }
+
+  p {
+    margin: 1rem 0 0;
+    max-width: 30rem;
+    a {
+      color: var(--color-secondary);
+    }
+  }
 }
 
 .cta {

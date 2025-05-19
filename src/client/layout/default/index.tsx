@@ -6,7 +6,7 @@ import { SideRailSocial } from 'client/components/widgets/SideRailSocials';
 
 import styles from './styles.module.css';
 
-type Props = {} & PropsWithChildren;
+type Props = PropsWithChildren;
 
 export const DefaultLayout: React.FC<Props> = props => {
   const { children } = props;

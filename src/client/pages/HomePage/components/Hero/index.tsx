@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
       <h2>Evgenii Kalkutin.</h2>
       <h3>I build things for the web.</h3>
       <p>
-        I&apos;m a certified Node.js
+        I&apos;m a certified Node.js{' '}
         <a
           target='_blank'
           title='JSNAD: OpenJS Node.js Application Developer'
@@ -19,8 +19,8 @@ export const Hero: React.FC = () => {
           rel='noreferrer'
         >
           JSNAD
-        </a>
-        &amp;
+        </a>{' '}
+        &amp;{' '}
         <a
           target='_blank'
           title='JSNSD: OpenJS Node.js Services Developer'

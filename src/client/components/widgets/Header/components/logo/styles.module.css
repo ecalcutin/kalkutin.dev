@@ -1,13 +1,12 @@
-.container {
-  > a {
-    color: var(--color-secondary);
-    line-height: 0;
+a.content {
+  color: var(--color-secondary);
+  line-height: 0;
 
-    > svg {
-      fill: none;
-      &:hover {
-        fill: var(--color-secondary);
-      }
+  svg {
+    fill: none;
+
+    &:hover {
+      fill: var(--color-secondary);
     }
   }
 }

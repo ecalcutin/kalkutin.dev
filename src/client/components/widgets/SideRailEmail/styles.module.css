@@ -1,17 +1,8 @@
 .container {
-  color: var(--color-text);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   font-size: 0.75rem;
 
-  > li {
-    a {
-      padding: 0.675rem;
-      letter-spacing: 0.05em;
-      writing-mode: vertical-rl;
-    }
+  a {
+    letter-spacing: 0.05em;
+    writing-mode: vertical-rl;
   }
 }

@@ -5,10 +5,8 @@ import { WebsiteLogo } from './website-logo';
 
 export const Logo: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <a href='/' aria-label='home'>
-        <WebsiteLogo size={45} />
-      </a>
-    </div>
+    <a className={styles.content} href='/' aria-label='home'>
+      <WebsiteLogo size={45} />
+    </a>
   );
 };

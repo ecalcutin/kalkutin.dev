@@ -1,16 +1,7 @@
 .container {
-  color: var(--color-text);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   font-size: 1.25rem;
 
-  > li {
-    a {
-      padding: 0.625rem;
-      line-height: 0;
-    }
+  a {
+    line-height: 0;
   }
 }

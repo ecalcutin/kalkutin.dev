@@ -2,8 +2,12 @@
   position: fixed;
   bottom: 0;
 
-  > ul {
+  ul {
     width: 2.5rem;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     li {
       font-family: var(--font-mono);
@@ -17,7 +21,10 @@
       }
 
       a {
+        padding: 0.675rem;
+        display: inline-block;
         transition: var(--transition);
+
         &:hover {
           transform: translateY(-0.25rem);
         }
