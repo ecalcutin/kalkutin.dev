@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button } from 'client/components/ui/Button';
+
 import styles from './styles.module.css';
 
 export const Navigation: React.FC = () => {
@@ -17,6 +19,9 @@ export const Navigation: React.FC = () => {
         </li>
         <li>
           <a href='/#contact'>Contact</a>
+        </li>
+        <li>
+          <Button className={styles.resumeButton}>Resume</Button>
         </li>
       </ol>
     </div>

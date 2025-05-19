@@ -5,6 +5,11 @@
 
 .wrapper {
   display: flex;
+  align-items: center;
+
+  .resumeButton {
+    padding: 0.75rem 1rem;
+  }
 
   > li {
     margin: 0px 5px;
