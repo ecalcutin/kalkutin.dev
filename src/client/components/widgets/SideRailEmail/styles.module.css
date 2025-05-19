@@ -9,6 +9,7 @@
 
   > li {
     a {
+      padding: 0.675rem;
       letter-spacing: 0.05em;
       writing-mode: vertical-rl;
     }
