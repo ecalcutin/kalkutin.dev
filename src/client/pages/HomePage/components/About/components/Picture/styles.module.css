@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  max-width: 300px;
+}
+
+.wrapper {
+  transition: var(--transition);
+
+  img {
+    filter: grayscale(100%) contrast(1);
+    transition: var(--transition);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+
+    transition: var(--transition);
+    border: 2px solid var(--color-secondary);
+
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translate(-0.25rem, -0.25rem);
+
+    &::after {
+      transform: translate(0.5rem, 0.5rem);
+    }
+
+    img {
+      filter: none;
+    }
+  }
+}

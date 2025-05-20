@@ -1,0 +1,22 @@
+ul.skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(5rem, 10rem));
+  grid-gap: 0 1rem;
+  margin-top: 1rem;
+
+  li {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+
+    &:before {
+      content: '▹';
+      color: var(--color-secondary);
+      font-size: var(--font-size-sm);
+      position: absolute;
+      left: 0;
+    }
+  }
+}
