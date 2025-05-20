@@ -6,9 +6,9 @@ import render from './ssr/render';
 
 const app = express();
 
-const STATIC_DIR = path.join(process.cwd(), 'build', 'static');
+const STATIC_DIR = path.join(process.cwd(), 'build');
 
-app.use('/static', express.static(STATIC_DIR));
+app.use(express.static(STATIC_DIR));
 app.use((request: Request, response: Response) => {
   const html = render();
   response.status(200).send(html);

@@ -8,6 +8,7 @@ const sharedConfig = {
   format: 'esm',
   loader: {
     '.woff2': 'file',
+    '.webp': 'file',
   },
 };
 
@@ -28,5 +29,5 @@ export const clientConfig = {
   entryPoints: {
     client: path.join(WORKSPACE_DIR, 'src', 'client', 'index.tsx'),
   },
-  outdir: path.join(BUILD_PATH, 'static'),
+  outdir: path.join(BUILD_PATH),
 };
