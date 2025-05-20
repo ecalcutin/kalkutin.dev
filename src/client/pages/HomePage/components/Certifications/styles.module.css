@@ -1,0 +1,8 @@
+.container {
+  max-width: 80rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
