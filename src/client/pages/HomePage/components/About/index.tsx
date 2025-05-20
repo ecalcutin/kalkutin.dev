@@ -10,7 +10,7 @@ import styles from './styles.module.css';
 export const About: React.FC = () => {
   return (
     <Section id='about' title='About me'>
-      <div>
+      <div className={styles.container}>
         <div>
           <div>
             <p>
@@ -31,7 +31,6 @@ export const About: React.FC = () => {
             ))}
           </ul>
         </div>
-
         <Picture src={profilePic} />
       </div>
     </Section>

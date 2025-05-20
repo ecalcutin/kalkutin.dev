@@ -1,9 +1,11 @@
 .container {
-  position: relative;
   max-width: 30rem;
 }
 
 .wrapper {
+  position: relative;
+  max-width: 30rem;
+  max-height: 30rem;
   transition: var(--transition);
 
   img {

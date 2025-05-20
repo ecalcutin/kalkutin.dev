@@ -1,3 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 5rem;
+}
+
 ul.skills {
   display: grid;
   grid-template-columns: repeat(2, minmax(8rem, 16rem));
