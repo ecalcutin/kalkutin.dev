@@ -1,15 +1,15 @@
 ul.skills {
   display: grid;
-  grid-template-columns: repeat(2, minmax(5rem, 10rem));
-  grid-gap: 0 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(2, minmax(8rem, 16rem));
+  grid-gap: 0 1.5rem;
+  margin-top: 1.5rem;
 
   li {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
     position: relative;
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
 
     &:before {
       content: '▹';

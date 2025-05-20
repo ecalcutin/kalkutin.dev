@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  max-width: 300px;
+  max-width: 30rem;
 }
 
 .wrapper {
@@ -17,8 +17,8 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
+    top: 1rem;
+    left: 1rem;
 
     transition: var(--transition);
     border: 2px solid var(--color-secondary);
@@ -27,10 +27,10 @@
   }
 
   &:hover {
-    transform: translate(-0.25rem, -0.25rem);
+    transform: translate(-0.2rem, -0.2rem);
 
     &::after {
-      transform: translate(0.5rem, 0.5rem);
+      transform: translate(0.4rem, 0.4rem);
     }
 
     img {

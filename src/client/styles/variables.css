@@ -23,15 +23,13 @@
   --font-sans: 'Calibre', sans-serif;
   --font-mono: 'SF Mono', monospace;
 
-  --font-size: 20px;
-  --font-size-sm: 0.75rem;
-  --font-size-md: 1.25rem;
+  --font-size-sm: 1.2rem;
+  --font-size-md: 2rem;
 
   /* Layout */
-  --spacing-sm: 0.9375rem;
-  --spacing-md: 1.25rem;
-  --spacing-lg: 1.875rem;
-  --spacing-xl: 3.125rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
 
   /* Animations*/
   --transition: all 0.25s cubic-bezier(0.65, 0.05, 0.35, 1);

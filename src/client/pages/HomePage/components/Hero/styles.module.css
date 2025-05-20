@@ -14,17 +14,17 @@
 
   h2 {
     color: var(--color-text-light);
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(4rem, 8vw, 8rem);
   }
 
   h3 {
     color: var(--color-text);
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(4rem, 8vw, 8rem);
   }
 
   p {
     margin: 1rem 0 0;
-    max-width: 30rem;
+    max-width: 50rem;
     a {
       color: var(--color-secondary);
     }

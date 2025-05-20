@@ -4,17 +4,17 @@
   background-color: transparent;
 
   font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
+  font-size: inherit;
 
   transition: var(--transition);
 
   padding: 1.25rem 1.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 4px 4px 0 0 var(--color-secondary);
-    transform: translate(-5px, -5px);
+    box-shadow: 0.3rem 0.3rem 0 0 var(--color-secondary);
+    transform: translate(-0.3rem, -0.3rem);
   }
 }

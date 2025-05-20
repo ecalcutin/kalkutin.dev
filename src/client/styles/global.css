@@ -7,13 +7,14 @@
 }
 
 html {
-  font-size: var(--font-size);
+  font-size: 10px;
 }
 
 body {
   background-color: var(--color-primary);
   color: var(--color-text);
   font-family: var(--font-sans);
+  font-size: 2rem;
 }
 
 a {

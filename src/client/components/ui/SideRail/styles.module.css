@@ -3,7 +3,6 @@
   bottom: 0;
 
   ul {
-    width: 2.5rem;
     color: var(--color-text);
     display: flex;
     flex-direction: column;
@@ -17,16 +16,16 @@
       }
 
       &:last-of-type {
-        margin-bottom: 1.25rem;
+        margin-bottom: 2rem;
       }
 
       a {
-        padding: 0.675rem;
+        padding: 1rem;
         display: inline-block;
         transition: var(--transition);
 
         &:hover {
-          transform: translateY(-0.25rem);
+          transform: translateY(-0.5rem);
         }
       }
     }
@@ -35,16 +34,16 @@
       content: '';
       display: block;
       width: 1px;
-      height: 8rem;
+      height: 12rem;
       background-color: var(--color-text);
     }
   }
 }
 
 .left {
-  left: var(--spacing-xl);
+  left: var(--spacing-lg);
 }
 
 .right {
-  right: var(--spacing-xl);
+  right: var(--spacing-lg);
 }

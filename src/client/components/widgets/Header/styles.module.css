@@ -1,6 +1,6 @@
 .container {
-  padding: var(--spacing-sm) var(--spacing-xl);
-  box-shadow: 0 10px 30px -10px var(--color-primary-dark);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  box-shadow: 0 1rem 3rem -1rem var(--color-primary-dark);
   position: fixed;
   width: 100%;
   top: 0;
@@ -9,7 +9,7 @@
 
 .content {
   font-family: var(--font-mono);
-  font-size: var(--fz-xs);
+  font-size: var(--font-size-sm);
   color: var(--color-text-light);
   display: flex;
   justify-content: space-between;
