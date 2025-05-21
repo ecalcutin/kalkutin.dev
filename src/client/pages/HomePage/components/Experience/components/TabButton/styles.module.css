@@ -1,0 +1,21 @@
+.container {
+  border: 0;
+
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  border-left: 2px solid var(--color-primary-light);
+  background-color: transparent;
+
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+
+  text-align: left;
+  color: var(--color-text);
+
+  transition: var(--transition);
+
+  &.active {
+    color: var(--color-secondary);
+  }
+}
