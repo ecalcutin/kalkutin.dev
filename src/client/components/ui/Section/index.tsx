@@ -21,6 +21,7 @@ export const Section: React.FC<Props> = props => {
         className={clsx(styles.title, {
           [styles.numbered!]: !overline,
           [styles.centered!]: overline,
+          [styles.heading!]: overline,
         })}
       >
         {props.title}
