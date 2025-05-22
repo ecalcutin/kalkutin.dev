@@ -2,9 +2,35 @@
   max-width: 100rem;
   margin: 0 auto;
   padding: 10rem 0;
+}
 
-  h2 {
-    font-size: clamp(2.5rem, 5vw, 3rem);
-    color: var(--color-text-light);
+.title {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: var(--color-text-light);
+  margin-bottom: 4rem;
+
+  &.centered {
+    text-align: center;
+  }
+}
+
+.overline {
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.numbered {
+  &::before {
+    content: '0' counter(section) '.';
+    counter-increment: section;
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    margin-right: 1rem;
+    font-size: 0.8em;
+    font-weight: 400;
   }
 }

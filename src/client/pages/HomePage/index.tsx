@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { Fragment, useLayoutEffect } from 'react';
 
 import { version } from '../../../../package.json';
 
@@ -7,7 +7,6 @@ import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
 import { Experience } from './components/Experience';
 import { Hero } from './components/Hero';
-import styles from './styles.module.css';
 
 export const HomePage: React.FC = () => {
   useLayoutEffect(() => {
@@ -16,12 +15,12 @@ export const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <main className={styles.container}>
+    <Fragment>
       <Hero />
       <About />
       <Certifications />
       <Experience />
       <Contact />
-    </main>
+    </Fragment>
   );
 };

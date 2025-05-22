@@ -1,9 +1,0 @@
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 0 15rem;
-
-  @media (max-width: 768px) {
-    padding: 0px 5rem;
-  }
-}

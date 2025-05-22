@@ -1,3 +1,10 @@
 .content {
-  margin: 0 var(--spacing-lg);
+  padding: 0 15rem;
+  min-height: 100vh;
+
+  counter-reset: section;
+
+  @media (max-width: 768px) {
+    padding: 0px 5rem;
+  }
 }

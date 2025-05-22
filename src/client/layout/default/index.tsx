@@ -16,7 +16,7 @@ export const DefaultLayout: React.FC<Props> = props => {
       <Header />
       <SideRailSocial />
       <SideRailEmail />
-      <div className={styles.content}>{children}</div>
+      <main className={styles.content}>{children}</main>
     </div>
   );
 };
