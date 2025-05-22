@@ -1,8 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 
-import { Header } from 'client/components/widgets/Header';
-import { SideRailEmail } from 'client/components/widgets/SideRailEmail';
-import { SideRailSocial } from 'client/components/widgets/SideRailSocials';
+import { Header } from 'client/components/ui/Header';
+import { SideRailEmail } from 'client/components/ui/SideRailEmail';
+import { SideRailSocial } from 'client/components/ui/SideRailSocials';
 
 import styles from './styles.module.css';
 
