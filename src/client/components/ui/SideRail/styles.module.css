@@ -2,6 +2,10 @@
   position: fixed;
   bottom: 0;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   ul {
     color: var(--color-text);
     display: flex;

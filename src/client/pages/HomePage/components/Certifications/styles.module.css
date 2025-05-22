@@ -1,8 +1,13 @@
-.container {
-  max-width: 80rem;
-}
-
 .content {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 700px;
+  }
+
+  a {
+    margin: 0 auto;
+  }
 }

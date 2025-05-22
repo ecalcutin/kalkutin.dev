@@ -9,11 +9,7 @@ import styles from './styles.module.css';
 
 export const Certifications: React.FC = () => {
   return (
-    <Section
-      id='certifications'
-      title='Certifications'
-      className={styles.container}
-    >
+    <Section id='certifications' title='Certifications'>
       <div className={styles.content}>
         <a
           target='_blank'

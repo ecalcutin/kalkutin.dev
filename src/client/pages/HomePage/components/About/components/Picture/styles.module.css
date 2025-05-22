@@ -1,5 +1,9 @@
 .container {
   max-width: 30rem;
+
+  @media (max-width: 768px) {
+    margin: 5rem auto 0;
+  }
 }
 
 .wrapper {
