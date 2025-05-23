@@ -1,12 +1,8 @@
-.container {
-  max-width: 30rem;
-
+.wrapper {
   @media (max-width: 768px) {
     margin: 5rem auto 0;
   }
-}
 
-.wrapper {
   position: relative;
   max-width: 30rem;
   max-height: 30rem;
