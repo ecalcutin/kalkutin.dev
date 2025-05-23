@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
   box-shadow: 0 1rem 3rem -1rem var(--color-primary-dark);
   position: fixed;
   width: 100%;
