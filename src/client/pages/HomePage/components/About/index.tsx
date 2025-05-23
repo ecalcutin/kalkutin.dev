@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 
 export const About: React.FC = () => {
   return (
-    <Section id='about' title='About me'>
+    <Section id='about' title='About me' subtitle='Some facts for you'>
       <div className={styles.container}>
         <div>
           <div>

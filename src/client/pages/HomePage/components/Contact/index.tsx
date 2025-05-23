@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 
 export const Contact: React.FC = () => {
   return (
-    <Section id='contact' title='Get in Touch' overline="What's next?">
+    <Section centered id='contact' title='Get in Touch' subtitle="What's next?">
       <p className={styles.content}>
         Although I&apos;m not currently looking for any new opportunities, my
         inbox is always open. Whether you have a question or just want to say

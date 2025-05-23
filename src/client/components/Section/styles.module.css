@@ -5,17 +5,13 @@
 }
 
 .title {
-  font-size: clamp(var(--font-size-md), 5vw, var(--font-size-xl));
+  font-size: clamp(4rem, 5vw, 6rem);
   color: var(--color-text-light);
   margin-bottom: var(--spacing-lg);
-
-  &.centered {
-    text-align: center;
-  }
 }
 
-.heading {
-  font-size: clamp(4rem, 5vw, 6rem);
+.centered {
+  text-align: center;
 }
 
 .overline {
@@ -23,10 +19,7 @@
   font-family: var(--font-mono);
   font-size: clamp(var(--font-size-sm), 5vw, 1.6rem);
   font-weight: 400;
-  text-align: center;
-}
 
-.numbered {
   &::before {
     content: '0' counter(section) '.';
     counter-increment: section;
