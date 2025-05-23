@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Section } from 'client/components/ui/Section';
+import { Section } from 'client/components/Section';
 
 import profilePic from '../../../../../public/images/profile.webp';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Section } from 'client/components/ui/Section';
+import { Section } from 'client/components/Section';
 import AWSCP from 'public/images/certificates/aws-cp.webp';
 import JSNAD from 'public/images/certificates/jsnad.webp';
 import JSNSD from 'public/images/certificates/jsnsd.webp';

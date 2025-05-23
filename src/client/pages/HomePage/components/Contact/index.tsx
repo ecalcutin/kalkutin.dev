@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button } from 'client/components/ui/Button';
-import { Section } from 'client/components/ui/Section';
+import { Button } from 'client/components/Button';
+import { Section } from 'client/components/Section';
 
 import styles from './styles.module.css';
 

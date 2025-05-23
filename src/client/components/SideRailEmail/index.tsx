@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SideRail } from 'client/components/ui/SideRail';
+import { SideRail } from 'client/components/SideRail';
 
 import styles from './styles.module.css';
 

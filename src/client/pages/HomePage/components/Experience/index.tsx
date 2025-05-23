@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Section } from 'client/components/ui/Section';
+import { Section } from 'client/components/Section';
 
 import { ExperienceTabList } from './components/ExperienceTabList';
 import { ExperienceTabPanels } from './components/ExperienceTabPanels';

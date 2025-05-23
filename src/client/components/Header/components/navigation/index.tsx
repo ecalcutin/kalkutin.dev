@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from 'client/components/ui/Button';
+import { Button } from 'client/components/Button';
 
 import styles from './styles.module.css';
 
