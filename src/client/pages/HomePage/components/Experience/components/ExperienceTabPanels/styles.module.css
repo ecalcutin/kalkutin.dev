@@ -1,0 +1,40 @@
+.container {
+  margin-left: 2rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-light);
+    font-weight: 500;
+
+    .company {
+      color: var(--color-secondary);
+    }
+  }
+
+  .range {
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+  }
+
+  ul {
+    font-size: var(--font-size-md);
+
+    li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1rem;
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--color-secondary);
+      }
+    }
+  }
+}

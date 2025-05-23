@@ -1,0 +1,20 @@
+.container {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  padding: 3rem;
+
+  a > div {
+    display: inline;
+  }
+
+  ul {
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+  }
+}

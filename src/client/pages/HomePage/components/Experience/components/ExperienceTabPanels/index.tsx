@@ -1,5 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 
+import styles from './styles.module.css';
+
 type Experience = {
   readonly company: string;
   readonly position: string;
@@ -16,7 +18,7 @@ export const ExperienceTabPanels: React.FC<Props> = props => {
   const { experiences } = props;
 
   return (
-    <div>
+    <div className={styles.container}>
       {experiences.map((experience, index) => {
         const { company, position, description, achievements } = experience;
 
@@ -24,10 +26,10 @@ export const ExperienceTabPanels: React.FC<Props> = props => {
           <div hidden={props.activeTabPanel !== index} key={index}>
             <h3>
               <span>{position}</span>
-              <span>{company}</span>
+              <span className={styles.company}>&nbsp;@&nbsp;{company}</span>
             </h3>
 
-            <p>Jun 2020 - Jan 2021</p>
+            <p className={styles.range}>Jun 2020 - Jan 2021</p>
             <p>{description}</p>
             <ul>
               {achievements.map((achievement, index) => (

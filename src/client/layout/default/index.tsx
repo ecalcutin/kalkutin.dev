@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 
+import { Footer } from 'client/components/ui/Footer';
 import { Header } from 'client/components/ui/Header';
 import { SideRailEmail } from 'client/components/ui/SideRailEmail';
 import { SideRailSocial } from 'client/components/ui/SideRailSocials';
@@ -17,6 +18,7 @@ export const DefaultLayout: React.FC<Props> = props => {
       <SideRailSocial />
       <SideRailEmail />
       <main className={styles.content}>{children}</main>
+      <Footer />
     </div>
   );
 };
