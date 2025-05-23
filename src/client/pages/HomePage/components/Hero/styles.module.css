@@ -25,7 +25,7 @@
   }
 
   p {
-    margin: 1rem 0 0;
+    margin-top: 2rem;
     max-width: 50rem;
     a {
       color: var(--color-secondary);
