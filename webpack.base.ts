@@ -1,8 +1,6 @@
-import path from 'path';
+import path from 'node:path';
 
 import { Configuration } from 'webpack';
-
-process.stdout.write(`Building for ${process.env.NODE_ENV}...\n`);
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -18,7 +16,7 @@ const configuration: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(j|t)sx?$/,
+        test: /\.tsx?$/,
         loader: 'esbuild-loader',
         options: {
           loader: 'tsx',
@@ -26,14 +24,14 @@ const configuration: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp)$/,
+        test: /\.(webp)$/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name][ext]',
         },
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        test: /\.(woff2)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext]',
@@ -44,11 +42,7 @@ const configuration: Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      pages: path.resolve(__dirname, 'src', 'pages'),
-      components: path.resolve(__dirname, 'src', 'components'),
-      theme: path.resolve(__dirname, 'src', 'theme'),
-      assets: path.resolve(__dirname, 'src', 'assets'),
-      config: path.resolve(__dirname, 'src', 'config'),
+      client: path.resolve(__dirname, 'src', 'client'),
     },
   },
   optimization: {
