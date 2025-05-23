@@ -2,10 +2,10 @@ import React, { Fragment, useLayoutEffect } from 'react';
 
 import { version } from '../../../../package.json';
 
-// import { About } from './components/About';
-// import { Certifications } from './components/Certifications';
-// import { Contact } from './components/Contact';
-// import { Experience } from './components/Experience';
+import { About } from './components/About';
+import { Certifications } from './components/Certifications';
+import { Contact } from './components/Contact';
+import { Experience } from './components/Experience';
 import { Hero } from './components/Hero';
 
 export const HomePage: React.FC = () => {
@@ -17,10 +17,10 @@ export const HomePage: React.FC = () => {
   return (
     <Fragment>
       <Hero />
-      {/* <About /> */}
-      {/* <Certifications /> */}
-      {/* <Experience />
-      <Contact /> */}
+      <About />
+      <Certifications />
+      <Experience />
+      <Contact />
     </Fragment>
   );
 };

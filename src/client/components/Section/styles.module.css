@@ -5,7 +5,7 @@
 }
 
 .title {
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   color: var(--color-text-light);
   margin-bottom: var(--spacing-lg);
 }
