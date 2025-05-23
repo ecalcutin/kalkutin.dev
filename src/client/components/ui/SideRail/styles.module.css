@@ -20,11 +20,11 @@
       }
 
       &:last-of-type {
-        margin-bottom: 2rem;
+        margin-bottom: var(--spacing-md);
       }
 
       a {
-        padding: 1rem;
+        padding: var(--spacing-sm);
         display: inline-block;
         transition: var(--transition);
 

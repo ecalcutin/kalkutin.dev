@@ -1,5 +1,5 @@
 .container {
-  margin-left: 2rem;
+  margin-left: var(--spacing-lg);
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -16,7 +16,7 @@
   }
 
   .range {
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-md);
     color: var(--color-text);
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
@@ -24,11 +24,13 @@
 
   ul {
     font-size: var(--font-size-md);
+    font-weight: 300;
+    font-size: 0.8em;
 
     li {
       position: relative;
       padding-left: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-sm);
       &:before {
         content: '▹';
         position: absolute;

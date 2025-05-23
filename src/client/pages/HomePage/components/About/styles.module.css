@@ -6,25 +6,30 @@
   @media (max-width: 768px) {
     display: block;
   }
+
+  p {
+    letter-spacing: 1px;
+    line-height: 3rem;
+  }
 }
 
 ul.skills {
   display: grid;
-  grid-template-columns: repeat(2, minmax(8rem, 16rem));
+  grid-template-columns: repeat(2, minmax(8rem, 28rem));
   grid-gap: 0 1.5rem;
   margin-top: 1.5rem;
+  font-size: 0.8em;
+  font-weight: 400;
 
   li {
     font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     padding-left: 1.5rem;
 
     &:before {
       content: '▹';
       color: var(--color-secondary);
-      font-size: var(--font-size-sm);
       position: absolute;
       left: 0;
     }

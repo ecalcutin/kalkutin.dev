@@ -1,5 +1,5 @@
 .container {
-  font-size: 1.2rem;
+  font-size: var(--font-size-sm);
 
   a {
     letter-spacing: 0.05em;
