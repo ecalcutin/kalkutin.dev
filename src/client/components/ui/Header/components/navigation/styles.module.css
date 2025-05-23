@@ -7,11 +7,11 @@ ol.container {
   }
 
   .resume {
-    padding: 0.5rem var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 
   li {
-    margin: 0 0.5rem;
+    margin: 0 var(--spacing-xs);
     counter-increment: item 1;
     transition: var(--transition);
 
@@ -29,7 +29,7 @@ ol.container {
       &::before {
         color: var(--color-secondary);
         content: '0' counter(item) '.';
-        margin-right: 0.5rem;
+        margin-right: var(--spacing-xs);
       }
     }
   }

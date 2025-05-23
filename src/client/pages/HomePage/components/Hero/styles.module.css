@@ -25,7 +25,6 @@
   }
 
   p {
-    margin-top: var(--spacing-md);
     line-height: 3rem;
     max-width: 60rem;
 
