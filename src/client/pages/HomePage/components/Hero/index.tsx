@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
         Javascript engineer specializing in building exceptional digital
         experiences.
       </p>
-      <div className={styles.cta}>
+      <div>
         <Button>Hire me now!</Button>
       </div>
     </section>
