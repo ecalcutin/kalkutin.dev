@@ -1,15 +1,3 @@
-@font-face {
-  font-family: 'Calibre';
-  src: url('../../public/fonts/Calibre/Calibre-Medium.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SF Mono';
-  src: url('../../public/fonts/SFMono/SFMono-Regular.woff2') format('woff2');
-  font-display: swap;
-}
-
 :root {
   /* Colors */
   --color-primary: #0a192f;
@@ -21,8 +9,8 @@
   --color-text-light: hsl(from var(--color-text) h calc(s + 40) calc(l + 25));
 
   /* Fonts */
-  --font-sans: 'Calibre', sans-serif;
-  --font-mono: 'SF Mono', monospace;
+  --font-sans: 'Roboto', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
 
   --font-size-sm: 1.3rem;
   --font-size-md: 2rem;
