@@ -25,7 +25,7 @@ export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-      favicon: 'src/assets/images/kalkutin.dev.ico',
+      favicon: 'public/kalkutin.dev.ico',
     }),
     new CopyPlugin({
       patterns: [
