@@ -1,0 +1,6 @@
+.header {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1rem 3rem -1rem var(--color-primary-dark);
+}

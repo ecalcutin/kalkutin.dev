@@ -54,9 +54,8 @@ const configuration: Configuration = {
           {
             loader: 'css-loader',
             options: {
-              esModule: true,
               modules: {
-                namedExport: true,
+                namedExport: false,
               },
             },
           },

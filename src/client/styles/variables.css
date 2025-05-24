@@ -1,3 +1,10 @@
 :root {
   --color-primary: #0a192f;
+  --color-secondary: #64ffda;
+
+  --color-primary-light: hsl(from var(--color-primary) h s calc(l + 10));
+  --color-primary-dark: hsl(from var(--color-primary) h s calc(l - 10));
+
+  --color-text: #8892b0;
+  --color-text-light: hsl(from var(--color-text) h calc(s + 40) calc(l + 25));
 }
