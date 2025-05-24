@@ -25,6 +25,7 @@
 
       li {
         margin: 0 2rem;
+        counter-increment: item 1;
 
         &:hover {
           color: var(--color-secondary);
@@ -32,6 +33,13 @@
 
         &:last-of-type {
           margin-right: 0;
+        }
+
+        &::before {
+          color: var(--color-secondary);
+          content: '0' counter(item) '.';
+          margin-right: 0.5rem;
+          font-size: 0.9em;
         }
       }
     }
