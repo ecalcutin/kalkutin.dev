@@ -26,6 +26,7 @@
       li {
         margin: 0 2rem;
         counter-increment: item 1;
+        transition: var(--transition);
 
         &:hover {
           color: var(--color-secondary);
