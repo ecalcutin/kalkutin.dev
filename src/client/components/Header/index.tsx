@@ -1,11 +1,14 @@
 import React from 'react';
 
+import { Logo } from './Logo';
 import styles from './header.module.css';
 
 export const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <div></div>
+      <a href='/' aria-label='home'>
+        <Logo size={45} />
+      </a>
       <nav>
         <ol>
           <li>
