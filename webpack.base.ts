@@ -27,7 +27,7 @@ const configuration: Configuration = {
         },
       },
       {
-        test: /\.(woff2)$/i,
+        test: /\.(woff|woff2)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext]',

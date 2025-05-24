@@ -16,7 +16,7 @@ export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
   target: 'web',
   output: {
     path: BUILD_PATH,
-    publicPath: isProduction ? '/assets' : '/',
+    publicPath: isProduction ? '/assets/' : '/',
     filename: '[name].bundle.js',
     clean: true,
   },
