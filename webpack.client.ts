@@ -8,9 +8,17 @@ import merge from 'webpack-merge';
 
 import sharedConfig from './webpack.base';
 
+const BUILD_PATH = path.resolve(__dirname, 'build', 'client');
+
 export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
   entry: './src/client/index.tsx',
   target: 'web',
+  output: {
+    path: BUILD_PATH,
+    publicPath: '/',
+    filename: '[name].bundle.js',
+    clean: true,
+  },
   devServer: {
     port: 8080,
   },
@@ -23,7 +31,7 @@ export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
       patterns: [
         {
           from: path.resolve(process.cwd(), 'public', 'robots.txt'),
-          to: path.resolve(process.cwd(), 'build'),
+          to: BUILD_PATH,
         },
       ],
     }),

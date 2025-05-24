@@ -7,12 +7,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const configuration: Configuration = {
   mode: isProduction ? 'production' : 'development',
   devtool: isProduction ? 'source-map' : 'eval-cheap-module-source-map',
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
-    filename: '[name].bundle.js',
-    clean: true,
-  },
+
   module: {
     rules: [
       {
