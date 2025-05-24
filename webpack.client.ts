@@ -9,13 +9,14 @@ import merge from 'webpack-merge';
 import sharedConfig from './webpack.base';
 
 const BUILD_PATH = path.resolve(__dirname, 'build', 'client');
+const isProduction = process.env.NODE_ENV === 'production';
 
 export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
   entry: './src/client/client-entry.tsx',
   target: 'web',
   output: {
     path: BUILD_PATH,
-    publicPath: '/assets',
+    publicPath: isProduction ? '/assets' : '/',
     filename: '[name].bundle.js',
     clean: true,
   },
