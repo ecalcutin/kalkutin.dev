@@ -6,10 +6,10 @@ import styles from './header.module.css';
 export const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <a href='/' aria-label='home'>
-        <Logo size={45} />
-      </a>
       <nav>
+        <a href='/' aria-label='home'>
+          <Logo />
+        </a>
         <ol>
           <li>
             <a href='/#about'>About</a>

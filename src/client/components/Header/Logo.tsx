@@ -1,18 +1,17 @@
 import React from 'react';
 
 type Props = {
-  readonly size: number;
+  readonly height?: number;
 };
 
 export const Logo: React.FC<Props> = props => {
-  const { size } = props;
+  const { height } = props;
 
   return (
     <svg
-      width={size}
-      height={size}
+      height={height || 45}
       xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 350 430'
+      viewBox='10 0 330 430'
     >
       <title>Kalkutin Evgenii</title>
       <polygon
