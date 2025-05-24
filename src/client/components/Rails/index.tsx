@@ -8,7 +8,7 @@ import styles from './rail.module.css';
 export const Rails: React.FC = () => {
   return (
     <Fragment>
-      <div className={clsx(styles.rail, styles.left)}>
+      <div className={clsx(styles.rail, styles.left, styles.socials)}>
         <ul>
           {SOCIAL_LINKS.map(({ title, icon, url }, index) => {
             return (
@@ -21,8 +21,8 @@ export const Rails: React.FC = () => {
           })}
         </ul>
       </div>
-      <div>
-        <ul className={clsx(styles.rail, styles.right)}>
+      <div className={clsx(styles.rail, styles.right, styles.email)}>
+        <ul>
           <li>
             <a href={`mailto:evgheni.calcutin@gmail.com`}>
               evgheni.calcutin@gmail.com

@@ -1,0 +1,62 @@
+.rail {
+  position: fixed;
+  bottom: 0;
+  width: 4rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+
+    li {
+      margin-bottom: 3rem;
+
+      &:hover {
+        color: var(--color-secondary);
+      }
+
+      &:hover {
+        transform: translateY(-0.5rem);
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 12rem;
+      background-color: var(--color-text);
+    }
+  }
+}
+
+.socials {
+  ul > li > a {
+    font-size: 3rem;
+  }
+}
+
+.email {
+  ul {
+    font-size: 1.5rem;
+    font-family: var(--font-mono);
+
+    li > a {
+      letter-spacing: 0.05em;
+      writing-mode: vertical-rl;
+    }
+  }
+}
+
+.left {
+  left: 5rem;
+}
+
+.right {
+  right: 5rem;
+}
