@@ -4,7 +4,7 @@
   "author": "Evgenii Kalkutin",
   "scripts": {
     "start": "webpack serve --config webpack.client.ts",
-    "build:client": "webpack --config webpack.client.ts ",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.ts ",
     "lint": "eslint",
     "prepare": "husky"
   },
@@ -17,6 +17,7 @@
     "@types/react-dom": "^19.1.5",
     "@types/webpack-node-externals": "^3.0.4",
     "copy-webpack-plugin": "^13.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "esbuild-loader": "^4.3.0",
     "eslint": "^9.27.0",
@@ -25,6 +26,7 @@
     "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
+    "mini-css-extract-plugin": "^2.9.2",
     "prettier": "^3.5.3",
     "style-loader": "^4.0.0",
     "ts-node": "^10.9.2",

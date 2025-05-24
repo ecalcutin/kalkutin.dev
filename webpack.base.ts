@@ -1,6 +1,7 @@
 import path from 'node:path';
 
 import { Configuration } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -19,10 +20,6 @@ const configuration: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
         test: /\.(webp)$/,
         type: 'asset/resource',
         generator: {
@@ -36,8 +33,43 @@ const configuration: Configuration = {
           filename: 'assets/fonts/[name][ext]',
         },
       },
+      {
+        test: /\.css$/,
+        exclude: /\.module\.css$/,
+        use: [
+          {
+            loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
+      {
+        test: /\.module\.css$/,
+        use: [
+          {
+            loader: isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: true,
+              modules: {
+                namedExport: true,
+              },
+            },
+          },
+        ],
+      },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
