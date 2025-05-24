@@ -11,11 +11,11 @@ import sharedConfig from './webpack.base';
 const BUILD_PATH = path.resolve(__dirname, 'build', 'client');
 
 export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
-  entry: './src/client/index.tsx',
+  entry: './src/client/client-entry.tsx',
   target: 'web',
   output: {
     path: BUILD_PATH,
-    publicPath: '/',
+    publicPath: '/assets',
     filename: '[name].bundle.js',
     clean: true,
   },

@@ -4,11 +4,14 @@
   "author": "Evgenii Kalkutin",
   "scripts": {
     "start": "webpack serve --config webpack.client.ts",
-    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.ts ",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.ts",
+    "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.ts",
     "lint": "eslint",
     "prepare": "husky"
   },
   "dependencies": {
+    "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
