@@ -25,7 +25,6 @@ export const ExperienceTabList: React.FC<Props> = props => {
               [styles.active!]: props.activeIndex === index,
             })}
             role='tab'
-            tabIndex={index}
             key={index}
             onClick={() => handleClick(index)}
           >
