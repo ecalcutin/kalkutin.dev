@@ -1,4 +1,4 @@
-# Kalkutin.dev - High-Performance Portfolio Website
+# Resume - High-Performance Portfolio Website
 
 ![PageSpeed Score](https://img.shields.io/badge/PageSpeed-100%25-brightgreen)
 ![React](https://img.shields.io/badge/React-19-blue)
