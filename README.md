@@ -72,8 +72,8 @@ A blazing-fast, 100% PageSpeed optimized portfolio website with server-side rend
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/kalkutin.dev.git
-cd kalkutin.dev
+git clone https://github.com/ecalcutin/resume.git
+cd resume
 
 # Install dependencies
 npm install
