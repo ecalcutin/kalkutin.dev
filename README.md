@@ -96,10 +96,10 @@ node build/server/server.js
 
 ```bash
 # Build the Docker image
-docker build -t portfolio .
+docker build -t resume .
 
 # Run the container
-docker run -p 3000:3000 portfolio
+docker run -p 3000:3000 resume
 ```
 
 ## ⚡ Performance Optimizations
