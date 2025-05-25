@@ -5,18 +5,29 @@ import styles from './section.module.css';
 
 type Props = {
   readonly className?: string;
+  readonly overline?: string;
   readonly title?: string;
-  readonly subTitle?: string;
 } & PropsWithChildren;
 
 export const Section: React.FC<Props> = props => {
-  const { title, subTitle } = props;
+  const { title, overline } = props;
 
   return (
     <section className={clsx(styles.section, props.className)}>
-      {subTitle && <h2>{subTitle}</h2>}
+      {overline && (
+        <h2 className={clsx(styles.overline, styles.centered, styles.numbered)}>
+          {overline}
+        </h2>
+      )}
       {title && (
-        <h2 className={clsx(styles.title, styles.rail, styles.numbered)}>
+        <h2
+          className={clsx(styles.title, {
+            [styles.rail!]: !overline,
+            [styles.numbered!]: !overline,
+            [styles.bigger!]: overline,
+            [styles.centered!]: overline,
+          })}
+        >
           {title}
         </h2>
       )}

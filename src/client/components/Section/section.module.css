@@ -1,6 +1,7 @@
 .section {
   max-width: 100rem;
   margin: 0 auto;
+  padding: 10rem 0;
 }
 
 .title {
@@ -8,6 +9,14 @@
   font-size: clamp(2.5rem, 5vw, 3rem);
   white-space: nowrap;
   margin-bottom: 4rem;
+
+  &.bigger {
+    font-size: clamp(4rem, 5vw, 6rem);
+  }
+}
+
+.centered {
+  text-align: center;
 }
 
 .rail {
@@ -38,5 +47,16 @@
     font-family: var(--font-mono);
     font-size: 0.8em;
     font-weight: 400;
+  }
+}
+
+.overline {
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+
+  &.numbered::before {
+    bottom: 0;
   }
 }
