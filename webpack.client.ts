@@ -1,29 +1,38 @@
 import path from 'node:path';
 
+import CopyPlugin from 'copy-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { Configuration } from 'webpack';
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyPlugin from 'copy-webpack-plugin';
 import merge from 'webpack-merge';
 
 import sharedConfig from './webpack.base';
 
+const BUILD_PATH = path.resolve(__dirname, 'build', 'client');
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
-  entry: './src/index.tsx',
+  entry: './src/client/client-entry.tsx',
   target: 'web',
+  output: {
+    path: BUILD_PATH,
+    publicPath: isProduction ? '/assets/' : '/',
+    filename: '[name].bundle.js',
+    clean: true,
+  },
   devServer: {
     port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-      favicon: 'src/assets/images/kalkutin.dev.ico',
+      favicon: 'public/kalkutin.dev.ico',
     }),
     new CopyPlugin({
       patterns: [
         {
           from: path.resolve(process.cwd(), 'public', 'robots.txt'),
-          to: path.resolve(process.cwd(), 'build'),
+          to: BUILD_PATH,
         },
       ],
     }),

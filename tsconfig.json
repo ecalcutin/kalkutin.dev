@@ -1,12 +1,33 @@
 {
   "compilerOptions": {
+    // Type Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Modules
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
-    "target": "ES6",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./src"
+
+    // Emit
+    "noEmit": true,
+
+    // Interop Constraints
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    // Language and Environment
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+
+    // Paths
+
+    "rootDir": "src/",
+    "baseUrl": "src/",
+
+    // Misc
+    "jsx": "react-jsx"
   },
-  "exclude": ["**/*.spec.tsx"]
+  "include": ["src/**/*"]
 }

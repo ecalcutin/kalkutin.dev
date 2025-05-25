@@ -1,0 +1,44 @@
+.container {
+  margin-left: 2rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-weight: 500;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+
+    .company {
+      color: var(--color-secondary);
+    }
+  }
+
+  .range {
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+  }
+
+  ul {
+    font-size: 0.9em;
+
+    li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1rem;
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--color-secondary);
+      }
+    }
+  }
+}

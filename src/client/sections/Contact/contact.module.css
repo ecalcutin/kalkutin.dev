@@ -1,0 +1,11 @@
+.contact {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 60rem;
+}
+
+.contactButton {
+  margin-top: 5rem;
+  text-align: center;
+}

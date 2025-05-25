@@ -1,0 +1,11 @@
+@import './reset.css';
+@import './fonts.css';
+@import './variables.css';
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  counter-reset: section;
+}

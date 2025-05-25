@@ -1,2 +1,4 @@
-node_modules
+.github
+.husky
 build
+node_modules
