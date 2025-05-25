@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "author": "Evgenii Kalkutin",
   "scripts": {
     "start": "webpack serve --config webpack.client.ts",
