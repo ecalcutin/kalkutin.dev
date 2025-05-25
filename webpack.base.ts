@@ -2,6 +2,7 @@ import path from 'node:path';
 
 import { Configuration } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -85,6 +86,7 @@ const configuration: Configuration = {
         },
       },
     },
+    minimizer: [new CssMinimizerPlugin()],
   },
 };
 
