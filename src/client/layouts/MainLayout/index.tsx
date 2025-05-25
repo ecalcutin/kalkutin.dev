@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 
+import { Footer } from 'client/components/Footer';
 import { Header } from 'client/components/Header';
 import { Rails } from 'client/components/Rails';
 
@@ -13,6 +14,7 @@ export const MainLayout: React.FC<Props> = props => {
       <Header />
       <Rails />
       <main className={styles.layout}>{props.children}</main>
+      <Footer />
     </div>
   );
 };
