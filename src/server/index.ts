@@ -8,7 +8,7 @@ const app = express();
 
 const STATIC_DIR = path.join(process.cwd(), 'build', 'client');
 
-app.use(express.static(STATIC_DIR));
+app.use(express.static(STATIC_DIR, { index: false }));
 app.use((request: Request, response: Response) => {
   const html = render();
   response.status(200).send(html);
