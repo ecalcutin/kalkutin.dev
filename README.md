@@ -8,6 +8,8 @@
 
 A blazing-fast, 100% PageSpeed optimized portfolio website with server-side rendering. This project showcases modern web development techniques focused on performance and clean architecture.
 
+![Resume Screenshot](./resume.png)
+
 ## 📌 Important Note
 
 **If you use this project as a template or inspiration for your own portfolio, please provide attribution to Evgenii Kalkutin by including a link back to the original repository or website.**
