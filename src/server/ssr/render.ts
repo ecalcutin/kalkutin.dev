@@ -11,8 +11,9 @@ const render = () => {
   const html = fs.readFileSync(htmlPath, { encoding: 'utf-8' });
   const css = fs.readFileSync(cssPath, { encoding: 'utf-8' });
 
-  // Replace the root div with the server-rendered content
+  // Replace the root div with the server-rendered content, replace CSS to inline-css
   return html
+    .replace('<link href="/main.css" rel="stylesheet">', '')
     .replace('</head>', `<style>${css}</style>`)
     .replace('<div id="root"></div>', `<div id="root">${rendered}</div>`);
 };
