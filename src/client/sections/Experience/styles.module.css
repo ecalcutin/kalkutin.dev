@@ -8,3 +8,7 @@
     display: block;
   }
 }
+
+.section {
+  max-width: 70rem;
+}

@@ -18,7 +18,7 @@
   border: 0;
   border-left: 2px solid var(--color-primary-light);
 
-  min-width: 145px;
+  min-width: var(--tab-width);
 
   transition: var(--transition);
   height: var(--tab-height);
@@ -37,6 +37,11 @@
 
   &:hover {
     color: var(--color-secondary);
+    background-color: var(--color-primary-light);
+  }
+
+  &:focus {
+    background-color: var(--color-primary-light);
   }
 
   @media (max-width: 768px) {
@@ -44,10 +49,8 @@
     justify-content: center;
     align-items: center;
     min-width: var(--tab-width);
-    padding: 0px 15px;
-    border-left: 0px;
+    border-left: 0;
     border-bottom: 2px solid var(--color-primary-light);
-    text-align: center;
   }
 }
 
@@ -68,13 +71,12 @@
   background: var(--color-secondary);
 
   @media (max-width: 768px) {
-    margin-left: 25px;
     top: auto;
     bottom: 0px;
     width: 100%;
     max-width: var(--tab-width);
     height: 2px;
-    margin-left: 50px;
+    margin-left: 5rem;
 
     transform: translate(var(--translate-x), 0);
   }

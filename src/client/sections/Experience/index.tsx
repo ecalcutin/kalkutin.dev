@@ -11,7 +11,12 @@ export const Experience: React.FC = () => {
   const [activeTabId, setActiveTabId] = useState<number>(0);
 
   return (
-    <Section id='experience' title='Experience' overline='Where I have worked'>
+    <Section
+      id='experience'
+      title='Experience'
+      overline='Where I have worked'
+      className={styles.section}
+    >
       <div className={styles.container}>
         <ExperienceTabList
           onClick={setActiveTabId}

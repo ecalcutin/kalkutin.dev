@@ -1,15 +1,18 @@
 .container {
-  margin-left: var(--spacing-lg);
+  margin-left: 2rem;
 
   @media (max-width: 768px) {
     margin-left: 0;
   }
 
+  p {
+    margin-bottom: 1rem;
+  }
+
   h3 {
     font-weight: 500;
-    font-size: var(--font-size-lg);
     color: var(--color-text-light);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.5rem;
 
     .company {
       color: var(--color-secondary);
@@ -17,21 +20,19 @@
   }
 
   .range {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 2rem;
     color: var(--color-text);
     font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
+    font-size: 1.3rem;
   }
 
   ul {
-    font-size: var(--font-size-md);
-    font-weight: 300;
-    font-size: 0.8em;
+    font-size: 0.9em;
 
     li {
       position: relative;
       padding-left: 3rem;
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: 1rem;
       &:before {
         content: '▹';
         position: absolute;
