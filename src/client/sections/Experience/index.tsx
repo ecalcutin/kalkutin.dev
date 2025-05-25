@@ -13,8 +13,7 @@ export const Experience: React.FC = () => {
   return (
     <Section
       id='experience'
-      title='Experience'
-      overline='Where I have worked'
+      title='Where I have worked'
       className={styles.section}
     >
       <div className={styles.container}>
