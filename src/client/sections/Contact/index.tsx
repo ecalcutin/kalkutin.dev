@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from 'client/components/Button';
 import { Section } from 'client/components/Section';
+import { EMAIL } from 'client/constants/email';
 
 import styles from './contact.module.css';
 
@@ -15,8 +16,8 @@ export const Contact: React.FC = () => {
           hi, I&apos;ll try my best to get back to you!
         </p>
         <p className={styles.contactButton}>
-          <a href={`mailto:evgheni.calcutin@gmail.com`}>
-            <Button> Say Hello</Button>
+          <a href={`mailto:${EMAIL}`}>
+            <Button>Say Hello</Button>
           </a>
         </p>
       </div>

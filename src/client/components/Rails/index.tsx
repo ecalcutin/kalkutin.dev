@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { Fragment } from 'react';
 
+import { EMAIL } from 'client/constants/email';
 import { SOCIAL_LINKS } from 'client/constants/socials';
 
 import styles from './rail.module.css';
@@ -24,9 +25,7 @@ export const Rails: React.FC = () => {
       <div className={clsx(styles.rail, styles.right, styles.email)}>
         <ul>
           <li>
-            <a href={`mailto:evgheni.calcutin@gmail.com`}>
-              evgheni.calcutin@gmail.com
-            </a>
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </li>
         </ul>
       </div>

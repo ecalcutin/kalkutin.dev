@@ -1,6 +1,8 @@
 import React from 'react';
 
+import { Button } from 'client/components/Button';
 import { Section } from 'client/components/Section';
+import { EMAIL } from 'client/constants/email';
 
 import styles from './hero.module.css';
 
@@ -32,6 +34,11 @@ export const Hero: React.FC = () => {
         Javascript engineer specializing in building exceptional digital
         experiences.
       </p>
+      <div className={styles.cta}>
+        <a href={`mailto:${EMAIL}`}>
+          <Button>Hire me now!</Button>
+        </a>
+      </div>
     </Section>
   );
 };
