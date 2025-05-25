@@ -4,9 +4,6 @@
   justify-content: center;
   min-height: 100vh;
 
-  max-width: 100rem;
-  margin: 0 auto;
-
   h1 {
     color: var(--color-secondary);
     font-family: var(--font-mono);

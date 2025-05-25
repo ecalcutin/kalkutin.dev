@@ -1,0 +1,38 @@
+.wrapper {
+  position: relative;
+  max-width: 30rem;
+  max-height: 30rem;
+  transition: var(--transition);
+
+  img {
+    filter: grayscale(100%) contrast(1);
+    transition: var(--transition);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    transition: var(--transition);
+    border: 2px solid var(--color-secondary);
+
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translate(-0.2rem, -0.2rem);
+
+    &::after {
+      transform: translate(0.4rem, 0.4rem);
+    }
+
+    img {
+      filter: none;
+    }
+  }
+}

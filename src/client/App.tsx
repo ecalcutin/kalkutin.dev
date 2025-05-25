@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import 'client/styles/global.css';
 import { MainLayout } from './layouts/MainLayout';
+import { About } from './sections/About';
 import { Hero } from './sections/Hero';
 
 export const App: React.FC = () => {
@@ -9,6 +10,7 @@ export const App: React.FC = () => {
     <Fragment>
       <MainLayout>
         <Hero />
+        <About />
       </MainLayout>
     </Fragment>
   );
