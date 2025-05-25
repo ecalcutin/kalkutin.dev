@@ -9,7 +9,7 @@ import { Picture } from './components/Picture';
 
 export const About: React.FC = () => {
   return (
-    <Section title='About Me'>
+    <Section id='about' title='About Me'>
       <div className={styles.about}>
         <div>
           <div>

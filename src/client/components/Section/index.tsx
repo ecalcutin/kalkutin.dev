@@ -4,16 +4,17 @@ import React, { PropsWithChildren } from 'react';
 import styles from './section.module.css';
 
 type Props = {
+  readonly id?: string;
   readonly className?: string;
   readonly overline?: string;
   readonly title?: string;
 } & PropsWithChildren;
 
 export const Section: React.FC<Props> = props => {
-  const { title, overline } = props;
+  const { title, overline, id, className, children } = props;
 
   return (
-    <section className={clsx(styles.section, props.className)}>
+    <section id={id} className={clsx(styles.section, className)}>
       {overline && (
         <h2 className={clsx(styles.overline, styles.centered, styles.numbered)}>
           {overline}
@@ -31,7 +32,7 @@ export const Section: React.FC<Props> = props => {
           {title}
         </h2>
       )}
-      {props.children}
+      {children}
     </section>
   );
 };
