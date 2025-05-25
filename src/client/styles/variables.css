@@ -11,5 +11,6 @@
   --font-sans: 'Calibre', sans-serif;
   --font-mono: 'SF Mono', monospace;
 
+  --easing: cubic-bezier(0.65, 0.05, 0.35, 1);
   --transition: all 0.25s cubic-bezier(0.65, 0.05, 0.35, 1);
 }

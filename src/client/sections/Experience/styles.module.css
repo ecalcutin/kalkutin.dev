@@ -1,0 +1,10 @@
+.container {
+  --tab-width: 15rem;
+  --tab-height: 4rem;
+
+  display: flex;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

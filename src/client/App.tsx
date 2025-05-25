@@ -5,6 +5,7 @@ import { MainLayout } from './layouts/MainLayout';
 import { About } from './sections/About';
 import { Certifications } from './sections/Certifications';
 import { Contact } from './sections/Contact';
+import { Experience } from './sections/Experience';
 import { Hero } from './sections/Hero';
 
 export const App: React.FC = () => {
@@ -14,6 +15,7 @@ export const App: React.FC = () => {
         <Hero />
         <About />
         <Certifications />
+        <Experience />
         <Contact />
       </MainLayout>
     </Fragment>
