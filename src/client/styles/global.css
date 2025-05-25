@@ -7,11 +7,21 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 2rem;
+  counter-reset: section;
 }
 
-section {
-  max-width: 100rem;
-  margin: 0 auto;
+.overline {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fz-md);
+  font-weight: 400;
+
+  &::before {
+    bottom: 0px;
+    font-size: var(--fz-sm);
+  }
 }
 
 .numbered-heading {

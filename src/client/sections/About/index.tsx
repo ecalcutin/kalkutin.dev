@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Section } from 'client/components/Section';
+
 import profilePic from '../../assets/images/profile.webp';
 
 import styles from './about.module.css';
@@ -7,7 +9,7 @@ import { Picture } from './components/Picture';
 
 export const About: React.FC = () => {
   return (
-    <section>
+    <Section>
       <h2 className='numbered-heading'>About Me</h2>
       <div className={styles.about}>
         <div>
@@ -35,7 +37,7 @@ export const About: React.FC = () => {
           alt='Evgenii Kalkutin profile photo'
         />
       </div>
-    </section>
+    </Section>
   );
 };
 

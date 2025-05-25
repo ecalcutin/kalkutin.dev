@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { Section } from 'client/components/Section';
+
 import styles from './hero.module.css';
 
 export const Hero: React.FC = () => {
   return (
-    <section className={styles.hero}>
+    <Section className={styles.hero}>
       <h1>Hi, my name is</h1>
       <h2>Evgenii Kalkutin.</h2>
       <h3>I build things for the web.</h3>
@@ -30,6 +32,6 @@ export const Hero: React.FC = () => {
         Javascript engineer specializing in building exceptional digital
         experiences.
       </p>
-    </section>
+    </Section>
   );
 };
