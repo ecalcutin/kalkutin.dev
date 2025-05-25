@@ -4,6 +4,7 @@ import 'client/styles/global.css';
 import { MainLayout } from './layouts/MainLayout';
 import { About } from './sections/About';
 import { Certifications } from './sections/Certifications';
+import { Contacts } from './sections/Contacts';
 import { Hero } from './sections/Hero';
 
 export const App: React.FC = () => {
@@ -13,6 +14,7 @@ export const App: React.FC = () => {
         <Hero />
         <About />
         <Certifications />
+        <Contacts />
       </MainLayout>
     </Fragment>
   );
