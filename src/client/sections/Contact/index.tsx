@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Button } from 'client/components/Button';
 import { Section } from 'client/components/Section';
 
 import styles from './contact.module.css';
@@ -13,9 +14,9 @@ export const Contact: React.FC = () => {
           inbox is always open. Whether you have a question or just want to say
           hi, I&apos;ll try my best to get back to you!
         </p>
-        <p className={styles.contact}>
-          <a className='email-link' href={`mailto:evgheni.calcutin@gmail.com`}>
-            {/* <Button> Say Hello</Button> */}
+        <p className={styles.contactButton}>
+          <a href={`mailto:evgheni.calcutin@gmail.com`}>
+            <Button> Say Hello</Button>
           </a>
         </p>
       </div>
