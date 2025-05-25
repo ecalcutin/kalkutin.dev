@@ -9,8 +9,7 @@ import { Picture } from './components/Picture';
 
 export const About: React.FC = () => {
   return (
-    <Section>
-      <h2 className='numbered-heading'>About Me</h2>
+    <Section title='About Me'>
       <div className={styles.about}>
         <div>
           <div>

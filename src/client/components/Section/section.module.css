@@ -2,3 +2,41 @@
   max-width: 100rem;
   margin: 0 auto;
 }
+
+.title {
+  color: var(--color-text-light);
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  white-space: nowrap;
+  margin-bottom: 4rem;
+}
+
+.rail {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: relative;
+    bottom: 0.5rem;
+    margin-left: 2rem;
+    display: block;
+    width: 30rem;
+    height: 1px;
+    background-color: var(--color-text);
+  }
+}
+
+.numbered {
+  &::before {
+    position: relative;
+    bottom: 0.5rem;
+    margin-right: 1rem;
+    counter-increment: section 1;
+    content: '0' counter(section) '.';
+    color: var(--color-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+}
