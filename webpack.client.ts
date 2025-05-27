@@ -1,6 +1,5 @@
 import path from 'node:path';
 
-import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { Configuration } from 'webpack';
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server';
@@ -26,14 +25,6 @@ export default merge<Configuration & DevServerConfiguration>(sharedConfig, {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       favicon: 'public/kalkutin.dev.ico',
-    }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(process.cwd(), 'public', 'robots.txt'),
-          to: BUILD_PATH,
-        },
-      ],
     }),
   ],
 });
