@@ -13,7 +13,6 @@ export default defineConfig([
 
   // TypeScript configuration - restrict to src folder only
   {
-    files: ['src/**/*.ts', 'src/**/*.tsx'],
     languageOptions: {
       parserOptions: {
         project: './tsconfig.json',
@@ -24,19 +23,16 @@ export default defineConfig([
 
   // Import plugin configuration
   {
-    files: ['src/**/*.ts', 'src/**/*.tsx'],
     ...importPlugin.flatConfigs.recommended,
     settings: {
       'import/resolver': {
         typescript: true,
-        node: true,
       },
     },
   },
 
   // Rule overrides
   {
-    files: ['src/**/*.ts', 'src/**/*.tsx'],
     rules: {
       'import/no-unresolved': ['error'],
       'import/order': [

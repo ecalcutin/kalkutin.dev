@@ -7,7 +7,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.ts",
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.ts",
-    "lint": "eslint",
+    "lint": "eslint src/",
     "prettier": "prettier --check ./src/**/*.{ts,tsx}",
     "prepare": "husky"
   },
