@@ -5,21 +5,11 @@ import importPlugin from 'eslint-plugin-import';
 
 export default defineConfig([
   // Global ignores
-  { ignores: ['build/**', 'node_modules/**', 'eslint.config.mjs'] },
+  { ignores: ['build/**', 'node_modules/**'] },
 
   // Base configurations
   js.configs.recommended,
   ts.configs.recommended,
-
-  // TypeScript configuration - restrict to src folder only
-  {
-    languageOptions: {
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
 
   // Import plugin configuration
   {
@@ -51,6 +41,7 @@ export default defineConfig([
       ],
 
       // General rules
+      'import/newline-after-import': ['error'],
       'no-console': 'error',
     },
   },
