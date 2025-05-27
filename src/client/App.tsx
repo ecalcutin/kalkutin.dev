@@ -28,5 +28,3 @@ export const App: React.FC = () => {
     </Fragment>
   );
 };
-
-export default React.createElement(App);
